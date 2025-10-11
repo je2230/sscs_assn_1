@@ -3,10 +3,16 @@ import requests as r
 import base64
 import json
 from util import extract_public_key, verify_artifact_signature
-from merkle_proof import DefaultHasher, verify_consistency, verify_inclusion, compute_leaf_hash
+from merkle_proof import (
+    DefaultHasher,
+    verify_consistency,
+    verify_inclusion,
+    compute_leaf_hash,
+)
 
 
 CONST_URL = "https://rekor.sigstore.dev/api/v1/log/"
+
 
 def get_log_entry(log_index, debug=False):
     # verify that log index value is sane
@@ -29,15 +35,14 @@ def get_log_entry(log_index, debug=False):
         cert = base64.b64decode(b64_cert.encode()).decode()
 
         if debug:
-            print ("In get_log_entry:\n", "Signature: ", sign, "\nCert: ", cert)
-        
+            print("In get_log_entry:\n", "Signature: ", sign, "\nCert: ", cert)
+
         return (sign, cert)
 
     else:
         if debug:
             print("In get_log_entry: api call failed with code", res.status_code)
         return False
-
 
 
 def get_verification_proof(log_index, debug=False):
@@ -58,34 +63,37 @@ def get_verification_proof(log_index, debug=False):
         ver = log_entry[key]["verification"]["inclusionProof"]
 
         # compute leaf hash
-        log_entry_body = log_entry[key].get('body') 
-        leaf_hash = compute_leaf_hash(log_entry_body) 
+        log_entry_body = log_entry[key].get("body")
+        leaf_hash = compute_leaf_hash(log_entry_body)
         ver["leafHash"] = leaf_hash
 
         if debug:
             print("In get_verification_proof:\nVer:", ver)
 
         return ver
-    
+
     else:
         if debug:
-            print(f"In get_verification_proof: api call failed with code {res.status_code}")
+            print(
+                f"In get_verification_proof: api call failed with code {res.status_code}"
+            )
         return False
-
 
 
 def inclusion(log_index, artifact_filepath, debug=False):
     # verify that log index and artifact filepath values are sane (log index verification happens in both helper functions)
     try:
         with open(artifact_filepath, "rb") as fd:
-            fd.read()     
-         
+            fd.read()
+
     except Exception as e:
         if debug:
-            print(f"In inclusion: failed to read from artifact file {artifact_filepath} with exception {e}")
+            print(
+                f"In inclusion: failed to read from artifact file {artifact_filepath} with exception {e}"
+            )
 
         return False
-    
+
     sign, cert = get_log_entry(log_index, debug)
     sign = base64.b64decode(sign.encode())
 
@@ -106,7 +114,15 @@ def inclusion(log_index, artifact_filepath, debug=False):
 
     # verify_inclusion(DefaultHasher, index, tree_size, leaf_hash, hashes, root_hash)
     try:
-        verify_inclusion(DefaultHasher, ver_map["logIndex"], ver_map["treeSize"], ver_map["leafHash"], ver_map["hashes"], ver_map["rootHash"], debug)
+        verify_inclusion(
+            DefaultHasher,
+            ver_map["logIndex"],
+            ver_map["treeSize"],
+            ver_map["leafHash"],
+            ver_map["hashes"],
+            ver_map["rootHash"],
+            debug,
+        )
         print("Offline root hash calculation for inclusion verified.")
 
     except Exception as e:
@@ -114,18 +130,18 @@ def inclusion(log_index, artifact_filepath, debug=False):
         return False
 
 
-
 def get_latest_checkpoint(debug=False):
     res = r.get(CONST_URL)
 
     if res.status_code == 200:
         return res.json()
-    
+
     else:
         if debug:
-            print(f"In get_latest_checkpoint: API call failed with code {res.status_code}")
+            print(
+                f"In get_latest_checkpoint: API call failed with code {res.status_code}"
+            )
         return False
-    
 
 
 def consistency(prev_checkpoint, debug=False):
@@ -134,8 +150,7 @@ def consistency(prev_checkpoint, debug=False):
         if debug:
             print("prev_checkpoint is empty. Please enter values")
         return False
-    
-    
+
     # get_latest_checkpoint()
     root_hash = str(prev_checkpoint["rootHash"])
     tree_size = str(prev_checkpoint["treeSize"])
@@ -153,39 +168,64 @@ def consistency(prev_checkpoint, debug=False):
             if res.status_code == 200:
                 old_proof = res.json()
 
-            verify_consistency(DefaultHasher, prev_checkpoint["treeSize"], new_proof["treeSize"], old_proof["hashes"], prev_checkpoint["rootHash"], new_proof["rootHash"])
+            verify_consistency(
+                DefaultHasher,
+                prev_checkpoint["treeSize"],
+                new_proof["treeSize"],
+                old_proof["hashes"],
+                prev_checkpoint["rootHash"],
+                new_proof["rootHash"],
+            )
             print("Consistency verification successful.")
 
         except Exception as e:
             print(f"In consistency: failed to verify consistency with exception {e}")
 
-    
 
 def main():
     debug = False
     parser = argparse.ArgumentParser(description="Rekor Verifier")
-    parser.add_argument('-d', '--debug', help='Debug mode',
-                        required=False, action='store_true') # Default false
-    parser.add_argument('-c', '--checkpoint', help='Obtain latest checkpoint\
-                        from Rekor Server public instance',
-                        required=False, action='store_true')
-    parser.add_argument('--inclusion', help='Verify inclusion of an\
+    parser.add_argument(
+        "-d", "--debug", help="Debug mode", required=False, action="store_true"
+    )  # Default false
+    parser.add_argument(
+        "-c",
+        "--checkpoint",
+        help="Obtain latest checkpoint\
+                        from Rekor Server public instance",
+        required=False,
+        action="store_true",
+    )
+    parser.add_argument(
+        "--inclusion",
+        help="Verify inclusion of an\
                         entry in the Rekor Transparency Log using log index\
                         and artifact filename.\
-                        Usage: --inclusion 126574567',
-                        required=False, type=int)
-    parser.add_argument('--artifact', help='Artifact filepath for verifying\
-                        signature',
-                        required=False)
-    parser.add_argument('--consistency', help='Verify consistency of a given\
-                        checkpoint with the latest checkpoint.',
-                        action='store_true')
-    parser.add_argument('--tree-id', help='Tree ID for consistency proof',
-                        required=False)
-    parser.add_argument('--tree-size', help='Tree size for consistency proof',
-                        required=False, type=int)
-    parser.add_argument('--root-hash', help='Root hash for consistency proof',
-                        required=False)
+                        Usage: --inclusion 126574567",
+        required=False,
+        type=int,
+    )
+    parser.add_argument(
+        "--artifact",
+        help="Artifact filepath for verifying\
+                        signature",
+        required=False,
+    )
+    parser.add_argument(
+        "--consistency",
+        help="Verify consistency of a given\
+                        checkpoint with the latest checkpoint.",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--tree-id", help="Tree ID for consistency proof", required=False
+    )
+    parser.add_argument(
+        "--tree-size", help="Tree size for consistency proof", required=False, type=int
+    )
+    parser.add_argument(
+        "--root-hash", help="Root hash for consistency proof", required=False
+    )
     args = parser.parse_args()
     if args.debug:
         debug = True
