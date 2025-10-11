@@ -151,11 +151,10 @@ def consistency(prev_checkpoint, debug=False):
             print("prev_checkpoint is empty. Please enter values")
         return False
 
-    # get_latest_checkpoint()
-    root_hash = str(prev_checkpoint["rootHash"])
     tree_size = str(prev_checkpoint["treeSize"])
     tree_id = str(prev_checkpoint["treeID"])
 
+    # get_latest_checkpoint()
     new_proof = get_latest_checkpoint()
 
     if new_proof:
