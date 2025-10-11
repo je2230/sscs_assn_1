@@ -83,23 +83,32 @@ def inclusion(log_index, artifact_filepath, debug=False):
 
         return False
     
-    sign, cert = get_log_entry(log_index)
+    sign, cert = get_log_entry(log_index, debug)
 
     # extract_public_key(certificate)
     pub_key = extract_public_key(cert.encode())
 
     # verify_artifact_signature(signature, public_key, artifact_filepath)
-    if not verify_artifact_signature(base64.b64decode(sign.encode()), pub_key, artifact_filepath):
+    try:
+        verify_artifact_signature(base64.b64decode(sign.encode()), pub_key, artifact_filepath)
         print("Signature is valid")
 
+    except Exception as e:
+        if debug:
+            print(f"In inclusion: exception occurred - {e}")
+
     # get_verification_proof(log_index)
-    ver_map = get_verification_proof(log_index)
+    ver_map = get_verification_proof(log_index, debug)
 
     # verify_inclusion(DefaultHasher, index, tree_size, leaf_hash, hashes, root_hash)
     try:
-        verify_inclusion(DefaultHasher, ver_map["logIndex"], ver_map["treeSize"], ver_map["leafHash"], ver_map["hashes"], ver_map["rootHash"])
+        verify_inclusion(DefaultHasher, ver_map["logIndex"], ver_map["treeSize"], ver_map["leafHash"], ver_map["hashes"], ver_map["rootHash"], debug)
+        print("Offline root hash calculation for inclusion verified.")
+
     except Exception as e:
-        print(f"In inclusion: Failed to verify consistency with exception {e}")
+        print(f"In inclusion: Failed to verify inclusion with exception {e}")
+        return False
+
 
 def get_latest_checkpoint(debug=False):
     res = r.get(CONST_URL)
