@@ -5,6 +5,8 @@ import json
 from util import extract_public_key, verify_artifact_signature
 from merkle_proof import DefaultHasher, verify_consistency, verify_inclusion, compute_leaf_hash
 
+CONST_URL = "https://rekor.sigstore.dev/api/v1/log/"
+
 def get_log_entry(log_index, debug=False):
     # verify that log index value is sane
     if not isinstance(log_index, int) or log_index <= 0:
@@ -12,7 +14,7 @@ def get_log_entry(log_index, debug=False):
             print("In get_log_entry: index invalid")
         return False
 
-    api_url = "https://rekor.sigstore.dev/api/v1/log/entries?logIndex=" + str(log_index)
+    api_url = f"{CONST_URL}entries?logIndex={str(log_index)}"
     res = r.get(api_url)
 
     if res.status_code == 200:
@@ -43,7 +45,7 @@ def get_verification_proof(log_index, debug=False):
             print("In get_verification_proof: index invalid")
         return False
 
-    api_url = "https://rekor.sigstore.dev/api/v1/log/entries?logIndex=" + str(log_index)
+    api_url = f"{CONST_URL}entries?logIndex={str(log_index)}"
     res = r.get(api_url)
 
     if res.status_code == 200:
@@ -64,9 +66,12 @@ def get_verification_proof(log_index, debug=False):
 
 def inclusion(log_index, artifact_filepath, debug=False):
     # verify that log index and artifact filepath values are sane (log index verification happens in both helper functions)
-    if not ".md" in artifact_filepath:
+    try:
+        with open(artifact_filepath, "rb") as fd:
+            fd.read()          
+    except Exception as e:
         if debug:
-            print("In inclusion: Artifact file incorrect")
+            print("In inclusion: failed to read from artifact file with exception", e)
 
         return False
     
@@ -86,8 +91,7 @@ def inclusion(log_index, artifact_filepath, debug=False):
     verify_inclusion(DefaultHasher, ver_map["logIndex"], ver_map["treeSize"], ver_map["hashes"], ver_map["hashes"], ver_map["rootHash"])
 
 def get_latest_checkpoint(debug=False):
-    api_url = "https://rekor.sigstore.dev/api/v1/log/"
-    res = r.get(api_url)
+    res = r.get(CONST_URL)
 
     if res.status_code == 200:
         return res.json()
@@ -106,7 +110,7 @@ def consistency(prev_checkpoint, debug=False):
         return False
     # get_latest_checkpoint()
 
-    check_url = "https://rekor.sigstore.dev/api/v1/log/proof?rootHash=" + str(prev_checkpoint["rootHash"]) + "&lastSize=" + str(prev_checkpoint["treeSize"]) + "&treeID=" + str(prev_checkpoint["treeID"])
+    check_url = f"{CONST_URL}proof?rootHash={str(prev_checkpoint["rootHash"])}&lastSize={str(prev_checkpoint["treeSize"])}&treeID={str(prev_checkpoint["treeID"])}"
     res = r.get(check_url)
 
     if res.status_code == 200:
