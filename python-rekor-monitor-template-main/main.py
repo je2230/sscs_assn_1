@@ -28,7 +28,7 @@ def get_log_entry(log_index, debug=False):
         cert = base64.b64decode(b64_cert.encode()).decode()
 
         if debug:
-            print ("In get_log_entry:\n", "Signature: ", sign, + "\nCert: ", cert)
+            print ("In get_log_entry:\n", "Signature: ", sign, "\nCert: ", cert)
         
         return (sign, cert)
 
@@ -45,6 +45,7 @@ def get_verification_proof(log_index, debug=False):
             print("In get_verification_proof: index invalid")
         return False
 
+    # get verification proof from api
     api_url = f"{CONST_URL}entries?logIndex={str(log_index)}"
     res = r.get(api_url)
 
@@ -54,6 +55,11 @@ def get_verification_proof(log_index, debug=False):
 
         ver = log_entry[key]["verification"]["inclusionProof"]
 
+        # compute leaf hash
+        log_entry_body = log_entry[key].get('body') 
+        leaf_hash = compute_leaf_hash(log_entry_body) 
+        ver["leafHash"] = leaf_hash
+
         if debug:
             print("In get_verification_proof:\nVer:", ver)
 
@@ -61,17 +67,19 @@ def get_verification_proof(log_index, debug=False):
     
     else:
         if debug:
-            print("In get_verification_proof: api call failed with code", res.status_code)
+            print(f"In get_verification_proof: api call failed with code {res.status_code}")
         return False
+
 
 def inclusion(log_index, artifact_filepath, debug=False):
     # verify that log index and artifact filepath values are sane (log index verification happens in both helper functions)
     try:
         with open(artifact_filepath, "rb") as fd:
-            fd.read()          
+            fd.read()     
+         
     except Exception as e:
         if debug:
-            print("In inclusion: failed to read from artifact file with exception", e)
+            print(f"In inclusion: failed to read from artifact file {artifact_filepath} with exception {e}")
 
         return False
     
@@ -88,7 +96,10 @@ def inclusion(log_index, artifact_filepath, debug=False):
     ver_map = get_verification_proof(log_index)
 
     # verify_inclusion(DefaultHasher, index, tree_size, leaf_hash, hashes, root_hash)
-    verify_inclusion(DefaultHasher, ver_map["logIndex"], ver_map["treeSize"], ver_map["hashes"], ver_map["hashes"], ver_map["rootHash"])
+    try:
+        verify_inclusion(DefaultHasher, ver_map["logIndex"], ver_map["treeSize"], ver_map["leafHash"], ver_map["hashes"], ver_map["rootHash"])
+    except Exception as e:
+        print(f"In inclusion: Failed to verify consistency with exception {e}")
 
 def get_latest_checkpoint(debug=False):
     res = r.get(CONST_URL)
@@ -98,7 +109,7 @@ def get_latest_checkpoint(debug=False):
     
     else:
         if debug:
-            print("API call failed with code", res.status_code)
+            print(f"API call failed with code {res.status_code}")
         return False
     
 
@@ -108,9 +119,14 @@ def consistency(prev_checkpoint, debug=False):
         if debug:
             print("prev_checkpoint is empty. Please enter values")
         return False
+    
+    
     # get_latest_checkpoint()
+    root_hash = str(prev_checkpoint["rootHash"])
+    tree_size = str(prev_checkpoint["treeSize"])
+    tree_id = str(prev_checkpoint["treeID"])
 
-    check_url = f"{CONST_URL}proof?rootHash={str(prev_checkpoint["rootHash"])}&lastSize={str(prev_checkpoint["treeSize"])}&treeID={str(prev_checkpoint["treeID"])}"
+    check_url = f"{CONST_URL}proof?rootHash={root_hash}&lastSize={tree_size}&treeID={tree_id}"
     res = r.get(check_url)
 
     if res.status_code == 200:
