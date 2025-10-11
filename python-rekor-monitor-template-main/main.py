@@ -5,6 +5,7 @@ import json
 from util import extract_public_key, verify_artifact_signature
 from merkle_proof import DefaultHasher, verify_consistency, verify_inclusion, compute_leaf_hash
 
+
 CONST_URL = "https://rekor.sigstore.dev/api/v1/log/"
 
 def get_log_entry(log_index, debug=False):
@@ -36,6 +37,7 @@ def get_log_entry(log_index, debug=False):
         if debug:
             print("In get_log_entry: api call failed with code", res.status_code)
         return False
+
 
 
 def get_verification_proof(log_index, debug=False):
@@ -71,6 +73,7 @@ def get_verification_proof(log_index, debug=False):
         return False
 
 
+
 def inclusion(log_index, artifact_filepath, debug=False):
     # verify that log index and artifact filepath values are sane (log index verification happens in both helper functions)
     try:
@@ -84,13 +87,14 @@ def inclusion(log_index, artifact_filepath, debug=False):
         return False
     
     sign, cert = get_log_entry(log_index, debug)
+    sign = base64.b64decode(sign.encode())
 
     # extract_public_key(certificate)
     pub_key = extract_public_key(cert.encode())
 
     # verify_artifact_signature(signature, public_key, artifact_filepath)
     try:
-        verify_artifact_signature(base64.b64decode(sign.encode()), pub_key, artifact_filepath)
+        verify_artifact_signature(sign, pub_key, artifact_filepath)
         print("Signature is valid")
 
     except Exception as e:
@@ -110,6 +114,7 @@ def inclusion(log_index, artifact_filepath, debug=False):
         return False
 
 
+
 def get_latest_checkpoint(debug=False):
     res = r.get(CONST_URL)
 
@@ -118,9 +123,10 @@ def get_latest_checkpoint(debug=False):
     
     else:
         if debug:
-            print(f"API call failed with code {res.status_code}")
+            print(f"In get_latest_checkpoint: API call failed with code {res.status_code}")
         return False
     
+
 
 def consistency(prev_checkpoint, debug=False):
     # verify that prev checkpoint is not empty
@@ -135,15 +141,23 @@ def consistency(prev_checkpoint, debug=False):
     tree_size = str(prev_checkpoint["treeSize"])
     tree_id = str(prev_checkpoint["treeID"])
 
-    check_url = f"{CONST_URL}proof?rootHash={root_hash}&lastSize={tree_size}&treeID={tree_id}"
-    res = r.get(check_url)
-
-    if res.status_code == 200:
-        old_proof = res.json()
-
     new_proof = get_latest_checkpoint()
 
-    verify_consistency(DefaultHasher, prev_checkpoint["treeSize"], new_proof["treeSize"], old_proof["hashes"], prev_checkpoint["rootHash"], new_proof["rootHash"])
+    if new_proof:
+        try:
+            new_size = new_proof["treeSize"]
+
+            check_url = f"{CONST_URL}proof?firstSize={tree_size}&lastSize={new_size}&treeID={tree_id}"
+            res = r.get(check_url)
+
+            if res.status_code == 200:
+                old_proof = res.json()
+
+            verify_consistency(DefaultHasher, prev_checkpoint["treeSize"], new_proof["treeSize"], old_proof["hashes"], prev_checkpoint["rootHash"], new_proof["rootHash"])
+            print("Consistency verification successful.")
+
+        except Exception as e:
+            print(f"In consistency: failed to verify consistency with exception {e}")
 
     
 
