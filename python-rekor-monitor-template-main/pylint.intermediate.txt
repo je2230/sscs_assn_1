@@ -1,0 +1,27 @@
+************* Module main
+main.py:115:65: C0303: Trailing whitespace (trailing-whitespace)
+main.py:193:0: C0301: Line too long (107/100) (line-too-long)
+main.py:216:0: C0301: Line too long (102/100) (line-too-long)
+main.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+main.py:37:4: R1705: Unnecessary "else" after "return" (no-else-return)
+main.py:79:4: R1705: Unnecessary "else" after "return" (no-else-return)
+main.py:121:11: W0703: Catching too general exception Exception (broad-except)
+main.py:118:46: C0103: Variable name "fd" doesn't conform to snake_case naming style (invalid-name)
+main.py:121:4: C0103: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+main.py:124:16: W1309: Using an f-string that does not have any interpolated variables (f-string-without-interpolation)
+main.py:141:11: W0703: Catching too general exception Exception (broad-except)
+main.py:141:4: C0103: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+main.py:161:11: W0703: Catching too general exception Exception (broad-except)
+main.py:161:4: C0103: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+main.py:103:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+main.py:121:4: W0612: Unused variable 'e' (unused-variable)
+main.py:178:4: R1705: Unnecessary "else" after "return" (no-else-return)
+main.py:232:15: W0703: Catching too general exception Exception (broad-except)
+main.py:232:8: C0103: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+main.py:189:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+main.py:3:0: C0411: standard import "import base64" should be placed before "import requests as r" (wrong-import-order)
+main.py:4:0: C0411: standard import "import json" should be placed before "import requests as r" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 8.36/10 (previous run: 8.36/10, +0.00)
+

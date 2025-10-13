@@ -15,6 +15,16 @@ CONST_URL = "https://rekor.sigstore.dev/api/v1/log/"
 
 
 def get_log_entry(log_index, debug=False):
+    """ fetches log entry from api given specific log index
+
+    Args:
+        log_index (int): index of log entry in question
+        debug (bool, optional): if true, prints verbose output to terminal. Defaults to False.
+
+    Returns:
+        tuple: returns (signature, certificate) if no errors, false if errors
+    """
+
     # verify that log index value is sane
     if not isinstance(log_index, int) or log_index <= 0:
         if debug:
@@ -46,6 +56,16 @@ def get_log_entry(log_index, debug=False):
 
 
 def get_verification_proof(log_index, debug=False):
+    """ fetches verification proof from api for specific log entry given index
+
+    Args:
+        log_index (int): index of log entry in question
+        debug (bool, optional): if true, prints verbose output to terminal. Defaults to False.
+
+    Returns:
+        dict: returns verification proof as a dict if no errors, false if errors
+    """
+
     # verify that log index value is sane
     if not isinstance(log_index, int) or log_index <= 0:
         if debug:
@@ -81,7 +101,19 @@ def get_verification_proof(log_index, debug=False):
 
 
 def inclusion(log_index, artifact_filepath, debug=False):
-    # verify that log index and artifact filepath values are sane (log index verification happens in both helper functions)
+    """ verifies an artifact's signature, if it is included in rekor log
+
+    Args:
+        log_index (int): index of log entry in question
+        artifact_filepath (str): path of artifact file to verify signature/inclusion of
+        debug (bool, optional): if true, prints verbose output to terminal. Defaults to False.
+
+    Returns:
+        none, bool: returns False if there are errors, else none
+    """
+
+    # verify that log index and artifact filepath values are sane
+    # (log index verification happens in both helper functions)
     try:
         with open(artifact_filepath, "rb") as fd:
             fd.read()
@@ -89,7 +121,7 @@ def inclusion(log_index, artifact_filepath, debug=False):
     except Exception as e:
         if debug:
             print(
-                f"In inclusion: failed to read from artifact file {artifact_filepath} with exception {e}"
+                f"In inclusion: failed to read from {artifact_filepath} with exception {e}"
             )
 
         return False
@@ -131,6 +163,15 @@ def inclusion(log_index, artifact_filepath, debug=False):
 
 
 def get_latest_checkpoint(debug=False):
+    """ fetches latest checkpoint from rekor api
+
+    Args:
+        debug (bool, optional): if true, prints verbose output to terminal. Defaults to False.
+
+    Returns:
+        dict: returns checkpoint as json dictionary object if no errors, else returns false
+    """
+
     res = r.get(CONST_URL)
 
     if res.status_code == 200:
@@ -145,6 +186,16 @@ def get_latest_checkpoint(debug=False):
 
 
 def consistency(prev_checkpoint, debug=False):
+    """ verifies an old rekor checkpoint is consistent with the newest checkpoint
+
+    Args:
+        prev_checkpoint (dict): dictionary holding tree id, tree size, root hash
+        debug (bool, optional): if true, prints verbose output to terminal. Defaults to False.
+
+    Returns:
+        none, bool: returns False if there are errors, else none
+    """
+
     # verify that prev checkpoint is not empty
     if not prev_checkpoint:
         if debug:
@@ -161,27 +212,33 @@ def consistency(prev_checkpoint, debug=False):
         try:
             new_size = new_proof["treeSize"]
 
-            check_url = f"{CONST_URL}proof?firstSize={tree_size}&lastSize={new_size}&treeID={tree_id}"
-            res = r.get(check_url)
+            url = f"{CONST_URL}proof?firstSize={tree_size}&lastSize={new_size}&treeID={tree_id}"
+            res = r.get(url)
 
             if res.status_code == 200:
                 old_proof = res.json()
 
-            verify_consistency(
-                DefaultHasher,
-                prev_checkpoint["treeSize"],
-                new_proof["treeSize"],
-                old_proof["hashes"],
-                prev_checkpoint["rootHash"],
-                new_proof["rootHash"],
-            )
-            print("Consistency verification successful.")
+                verify_consistency(
+                    DefaultHasher,
+                    prev_checkpoint["treeSize"],
+                    new_proof["treeSize"],
+                    old_proof["hashes"],
+                    prev_checkpoint["rootHash"],
+                    new_proof["rootHash"],
+                )
+                print("Consistency verification successful.")
 
         except Exception as e:
             print(f"In consistency: failed to verify consistency with exception {e}")
 
 
 def main():
+    """ main functiuon: parses command line arguments, calls correct functions
+
+    Returns:
+        none: program exits after execution
+    """
+
     debug = False
     parser = argparse.ArgumentParser(description="Rekor Verifier")
     parser.add_argument(
