@@ -1,6 +1,6 @@
-""" Software Supply Chain Security HW 2 - Rekor monitor
+"""Software Supply Chain Security HW 2 - Rekor monitor
 
-    Jess Ermi - je2230
+Jess Ermi - je2230
 """
 
 import argparse
@@ -22,7 +22,7 @@ CONST_URL = "https://rekor.sigstore.dev/api/v1/log/"
 
 
 def get_log_entry(log_index, debug=False):
-    """ fetches log entry from api given specific log index
+    """fetches log entry from api given specific log index
 
     Args:
         log_index (int): index of log entry in question
@@ -56,14 +56,13 @@ def get_log_entry(log_index, debug=False):
 
         return (sign, cert)
 
-
     if debug:
         print("In get_log_entry: api call failed with code", res.status_code)
     return False
 
 
 def get_verification_proof(log_index, debug=False):
-    """ fetches verification proof from api for specific log entry given index
+    """fetches verification proof from api for specific log entry given index
 
     Args:
         log_index (int): index of log entry in question
@@ -100,14 +99,12 @@ def get_verification_proof(log_index, debug=False):
         return ver
 
     if debug:
-        print(
-            f"In get_verification_proof: api call failed with code {res.status_code}"
-        )
+        print(f"In get_verification_proof: api call failed with code {res.status_code}")
     return False
 
 
 def inclusion(log_index, artifact_filepath, debug=False):
-    """ verifies an artifact's signature, if it is included in rekor log
+    """verifies an artifact's signature, if it is included in rekor log
 
     Args:
         log_index (int): index of log entry in question
@@ -175,7 +172,7 @@ def inclusion(log_index, artifact_filepath, debug=False):
 
 
 def get_latest_checkpoint(debug=False):
-    """ fetches latest checkpoint from rekor api
+    """fetches latest checkpoint from rekor api
 
     Args:
         debug (bool, optional): if true, prints verbose output to terminal. Defaults to False.
@@ -190,14 +187,12 @@ def get_latest_checkpoint(debug=False):
         return res.json()
 
     if debug:
-        print(
-            f"In get_latest_checkpoint: API call failed with code {res.status_code}"
-        )
+        print(f"In get_latest_checkpoint: API call failed with code {res.status_code}")
     return False
 
 
 def consistency(prev_checkpoint, debug=False):
-    """ verifies an old rekor checkpoint is consistent with the newest checkpoint
+    """verifies an old rekor checkpoint is consistent with the newest checkpoint
 
     Args:
         prev_checkpoint (dict): dictionary holding tree id, tree size, root hash
@@ -254,7 +249,7 @@ def consistency(prev_checkpoint, debug=False):
 
 
 def main():
-    """ main functiuon: parses command line arguments, calls correct functions
+    """main functiuon: parses command line arguments, calls correct functions
 
     Returns:
         none: program exits after execution
