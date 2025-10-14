@@ -1,13 +1,20 @@
+""" Software Supply Chain Security HW 2 - Rekor monitor
+
+    Jess Ermi - je2230
+"""
+
 import argparse
-import requests as r
 import base64
 import json
+import requests as r
+from cryptography.exceptions import InvalidSignature
 from util import extract_public_key, verify_artifact_signature
 from merkle_proof import (
     DefaultHasher,
     verify_consistency,
     verify_inclusion,
     compute_leaf_hash,
+    RootMismatchError,
 )
 
 
@@ -49,10 +56,10 @@ def get_log_entry(log_index, debug=False):
 
         return (sign, cert)
 
-    else:
-        if debug:
-            print("In get_log_entry: api call failed with code", res.status_code)
-        return False
+
+    if debug:
+        print("In get_log_entry: api call failed with code", res.status_code)
+    return False
 
 
 def get_verification_proof(log_index, debug=False):
@@ -92,12 +99,11 @@ def get_verification_proof(log_index, debug=False):
 
         return ver
 
-    else:
-        if debug:
-            print(
-                f"In get_verification_proof: api call failed with code {res.status_code}"
-            )
-        return False
+    if debug:
+        print(
+            f"In get_verification_proof: api call failed with code {res.status_code}"
+        )
+    return False
 
 
 def inclusion(log_index, artifact_filepath, debug=False):
@@ -109,19 +115,19 @@ def inclusion(log_index, artifact_filepath, debug=False):
         debug (bool, optional): if true, prints verbose output to terminal. Defaults to False.
 
     Returns:
-        none, bool: returns False if there are errors, else none
+        bool: returns False if there are errors, else True
     """
 
     # verify that log index and artifact filepath values are sane
     # (log index verification happens in both helper functions)
     try:
-        with open(artifact_filepath, "rb") as fd:
-            fd.read()
+        with open(artifact_filepath, "rb") as art_file:
+            art_file.read()
 
-    except Exception as e:
+    except OSError as error:
         if debug:
             print(
-                f"In inclusion: failed to read from {artifact_filepath} with exception {e}"
+                f"In inclusion: failed to read from {artifact_filepath} with exception {error}"
             )
 
         return False
@@ -137,9 +143,9 @@ def inclusion(log_index, artifact_filepath, debug=False):
         verify_artifact_signature(sign, pub_key, artifact_filepath)
         print("Signature is valid")
 
-    except Exception as e:
+    except InvalidSignature as error:
         if debug:
-            print(f"In inclusion: exception occurred - {e}")
+            print(f"In inclusion: error verifying signature - {error}")
 
     # get_verification_proof(log_index)
     ver_map = get_verification_proof(log_index, debug)
@@ -157,8 +163,14 @@ def inclusion(log_index, artifact_filepath, debug=False):
         )
         print("Offline root hash calculation for inclusion verified.")
 
-    except Exception as e:
-        print(f"In inclusion: Failed to verify inclusion with exception {e}")
+        return True
+
+    except ValueError as error:
+        print(f"In inclusion: Failed to verify inclusion with exception {error}")
+        return False
+
+    except RootMismatchError as error:
+        print(f"In inclusion: Failed to verify inclusion with exception {error}")
         return False
 
 
@@ -177,12 +189,11 @@ def get_latest_checkpoint(debug=False):
     if res.status_code == 200:
         return res.json()
 
-    else:
-        if debug:
-            print(
-                f"In get_latest_checkpoint: API call failed with code {res.status_code}"
-            )
-        return False
+    if debug:
+        print(
+            f"In get_latest_checkpoint: API call failed with code {res.status_code}"
+        )
+    return False
 
 
 def consistency(prev_checkpoint, debug=False):
@@ -193,7 +204,7 @@ def consistency(prev_checkpoint, debug=False):
         debug (bool, optional): if true, prints verbose output to terminal. Defaults to False.
 
     Returns:
-        none, bool: returns False if there are errors, else none
+        bool: returns False if there are errors, else True
     """
 
     # verify that prev checkpoint is not empty
@@ -227,9 +238,19 @@ def consistency(prev_checkpoint, debug=False):
                     new_proof["rootHash"],
                 )
                 print("Consistency verification successful.")
+                return True
 
-        except Exception as e:
-            print(f"In consistency: failed to verify consistency with exception {e}")
+            return False
+
+        except ValueError as error:
+            print(f"In inclusion: Failed to verify inclusion with exception {error}")
+            return False
+
+        except RootMismatchError as error:
+            print(f"In inclusion: Failed to verify inclusion with exception {error}")
+            return False
+
+    return False
 
 
 def main():
