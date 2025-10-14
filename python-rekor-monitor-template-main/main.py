@@ -39,7 +39,7 @@ def get_log_entry(log_index, debug=False):
         return False
 
     api_url = f"{CONST_URL}entries?logIndex={str(log_index)}"
-    res = r.get(api_url)
+    res = r.get(api_url, timeout=10)
 
     if res.status_code == 200:
         log_entry = res.json()
@@ -80,7 +80,7 @@ def get_verification_proof(log_index, debug=False):
 
     # get verification proof from api
     api_url = f"{CONST_URL}entries?logIndex={str(log_index)}"
-    res = r.get(api_url)
+    res = r.get(api_url, timeout=10)
 
     if res.status_code == 200:
         log_entry = res.json()
@@ -181,7 +181,7 @@ def get_latest_checkpoint(debug=False):
         dict: returns checkpoint as json dictionary object if no errors, else returns false
     """
 
-    res = r.get(CONST_URL)
+    res = r.get(CONST_URL, timeout=10)
 
     if res.status_code == 200:
         return res.json()
@@ -219,7 +219,7 @@ def consistency(prev_checkpoint, debug=False):
             new_size = new_proof["treeSize"]
 
             url = f"{CONST_URL}proof?firstSize={tree_size}&lastSize={new_size}&treeID={tree_id}"
-            res = r.get(url)
+            res = r.get(url, timeout=10)
 
             if res.status_code == 200:
                 old_proof = res.json()

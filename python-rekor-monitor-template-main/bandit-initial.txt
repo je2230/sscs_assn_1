@@ -1,0 +1,61 @@
+Run started:2025-10-14 00:25:49.684764
+
+Test results:
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b113_request_without_timeout.html
+   Location: .\main.py:42:10
+41	    api_url = f"{CONST_URL}entries?logIndex={str(log_index)}"
+42	    res = r.get(api_url)
+43	
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b113_request_without_timeout.html
+   Location: .\main.py:83:10
+82	    api_url = f"{CONST_URL}entries?logIndex={str(log_index)}"
+83	    res = r.get(api_url)
+84	
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b113_request_without_timeout.html
+   Location: .\main.py:184:10
+183	
+184	    res = r.get(CONST_URL)
+185	
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b113_request_without_timeout.html
+   Location: .\main.py:222:18
+221	            url = f"{CONST_URL}proof?firstSize={tree_size}&lastSize={new_size}&treeID={tree_id}"
+222	            res = r.get(url)
+223	
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 398
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 4
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 4
+		Medium: 0
+		High: 0
+Files skipped (0):
