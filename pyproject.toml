@@ -1,22 +1,27 @@
 [project]
-package-mode = false
-name = "sscs-assn-1"
+name = "sscs_assn_1"
 version = "0.1.0"
-description = "Rekor monitor assignment for software supply chain security"
+package-mode = false
+description = "Python rekor monitor assignment for sscs"
 authors = [
-    {name = "je2230",email = "118147259+je2230@users.noreply.github.com"}
+    {name = "Jess",email = "ermi.jess@gmail.com"}
 ]
-license = {text = "GPL-3.0"}
+license = {text = "GPL3.0"}
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = [
     "ruff (>=0.14.4,<0.15.0)",
-    "pylint (>=4.0.2,<5.0.0) ; python_version >='3.10.0,<3.11'",
     "mypy (>=1.18.2,<2.0.0)",
-    "bandit (>=1.8.6,<2.0.0)"
+    "pylint (>=4.0.2,<5.0.0)",
+    "bandit (>=1.8.6,<2.0.0)",
+    "pytest (>=9.0.0,<10.0.0)"
 ]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
+
