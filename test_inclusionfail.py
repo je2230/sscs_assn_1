@@ -6,8 +6,8 @@ import subprocess
 import main
 
 
-def test_inclusion():
-    logIndex = 692782562
+def test_inclusion_fail():
+    logIndex = 1
     result = subprocess.run(
         ['python', 'main.py', '--inclusion', str(logIndex), '--artifact', 'artifact.md'],
         capture_output=True,

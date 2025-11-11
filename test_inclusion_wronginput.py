@@ -6,10 +6,10 @@ import subprocess
 import main
 
 
-def test_inclusion():
+def test_inclusion_wronginput():
     logIndex = 692782562
     result = subprocess.run(
-        ['python', 'main.py', '--inclusion', str(logIndex), '--artifact', 'artifact.md'],
+        ['python', 'main.py', '--inclusion', str(logIndex)],
         capture_output=True,
         text=True
     )
