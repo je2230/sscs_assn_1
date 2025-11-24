@@ -3,8 +3,6 @@ import json
 from jsonschema import validate
 import subprocess
 
-from assn1 import main, util, merkle_proof
-
 def test_consistency_wronginput():
     tree_id = 1193050959916656506
     tree_size = 570880561

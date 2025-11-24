@@ -3,8 +3,6 @@ import json
 from jsonschema import validate
 import subprocess
 
-from assn1 import main
-
 checkpoint_schema = {
     "type": "object",
     "properties": {

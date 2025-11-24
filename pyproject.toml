@@ -1,11 +1,10 @@
 [project]
-name = "assn1"
+name = "sscs_assn4"
 version = "0.1.0"
 description = "Python rekor monitor assignment for sscs"
 authors = [
     {name = "Jess",email = "ermi.jess@gmail.com"}
 ]
-license = {text = "GPL3.0"}
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -17,11 +16,11 @@ dependencies = [
     "pytest-cov (>=7.0.0,<8.0.0)"
 ]
 
+[project.urls]
+repository = "https://github.com/je2230/sscs_assn_1"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-make-package = false
-

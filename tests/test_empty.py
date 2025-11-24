@@ -3,8 +3,6 @@ import json
 from jsonschema import validate
 import subprocess
 
-import main
-
 def test_empty():
     tree_id = 1193050959916656506
     tree_size = 570880561
