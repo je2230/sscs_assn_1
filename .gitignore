@@ -4,3 +4,4 @@ __pycache__/
 artifact.bundle
 .pytest_cache/
 tests/__pycache__/
+trace
