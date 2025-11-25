@@ -13,5 +13,5 @@ def test_consistency():
         text=True
     )
     output = result.stdout
-
+    print(output)
 

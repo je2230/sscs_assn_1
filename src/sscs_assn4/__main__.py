@@ -8,8 +8,8 @@ import base64
 import json
 import requests as r
 from cryptography.exceptions import InvalidSignature
-from util import extract_public_key, verify_artifact_signature
-from merkle_proof import (
+from .util import extract_public_key, verify_artifact_signature
+from .merkle_proof import (
     DefaultHasher,
     verify_consistency,
     verify_inclusion,

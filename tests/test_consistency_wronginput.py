@@ -13,5 +13,6 @@ def test_consistency_wronginput():
         text=True
     )
     output = result.stdout
+    print(output)
 
 

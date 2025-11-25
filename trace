@@ -1,0 +1,2061 @@
+versions pytest-9.0.0, python-3.13.9.final.0
+invocation_dir=C:\Users\turni\projects\sscs\sscs_assn_1
+cwd=C:\Users\turni\projects\sscs\sscs_assn_1
+args=('--cov=src/sscs_assn4', 'tests/', '--debug=trace', '--cov-config=pyproject.toml')
+
+  pytest_cmdline_main [hook]
+      config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+    pytest_plugin_registered [hook]
+        plugin: <Session  exitstatus='<UNSET>' testsfailed=0 testscollected=0>
+        plugin_name: session
+        manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+    finish pytest_plugin_registered --> [] [hook]
+    pytest_configure [hook]
+        config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x00000299ABFC2660>
+          plugin_name: lfplugin
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x00000299ABFC2CF0>
+          plugin_name: nfplugin
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+    early skip of rewriting module: faulthandler [assertion]
+      pytest_plugin_registered [hook]
+          plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
+          plugin_name: legacypath-tmpdir
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+    early skip of rewriting module: pdb [assertion]
+    early skip of rewriting module: cmd [assertion]
+    early skip of rewriting module: code [assertion]
+    early skip of rewriting module: codeop [assertion]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+          plugin_name: 2859000435712
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          plugin_name: pytestconfig
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.mark' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\mark\\__init__.py'>
+          plugin_name: mark
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.main' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\main.py'>
+          plugin_name: main
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.runner' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\runner.py'>
+          plugin_name: runner
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.fixtures' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\fixtures.py'>
+          plugin_name: fixtures
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.helpconfig' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\helpconfig.py'>
+          plugin_name: helpconfig
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\python.py'>
+          plugin_name: python
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.terminal' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\terminal.py'>
+          plugin_name: terminal
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.debugging' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\debugging.py'>
+          plugin_name: debugging
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unittest' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\unittest.py'>
+          plugin_name: unittest
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.capture' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\capture.py'>
+          plugin_name: capture
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.skipping' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\skipping.py'>
+          plugin_name: skipping
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.legacypath' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\legacypath.py'>
+          plugin_name: legacypath
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.tmpdir' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\tmpdir.py'>
+          plugin_name: tmpdir
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.monkeypatch' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\monkeypatch.py'>
+          plugin_name: monkeypatch
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.recwarn' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\recwarn.py'>
+          plugin_name: recwarn
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.pastebin' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\pastebin.py'>
+          plugin_name: pastebin
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.assertion' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\__init__.py'>
+          plugin_name: assertion
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.junitxml' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\junitxml.py'>
+          plugin_name: junitxml
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.doctest' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\doctest.py'>
+          plugin_name: doctest
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.cacheprovider' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\cacheprovider.py'>
+          plugin_name: cacheprovider
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setuponly' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\setuponly.py'>
+          plugin_name: setuponly
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setupplan' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\setupplan.py'>
+          plugin_name: setupplan
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.stepwise' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\stepwise.py'>
+          plugin_name: stepwise
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unraisableexception' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\unraisableexception.py'>
+          plugin_name: unraisableexception
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.threadexception' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\threadexception.py'>
+          plugin_name: threadexception
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.warnings' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\warnings.py'>
+          plugin_name: warnings
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.logging' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\logging.py'>
+          plugin_name: logging
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.reports' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\reports.py'>
+          plugin_name: reports
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.faulthandler' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\faulthandler.py'>
+          plugin_name: faulthandler
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.subtests' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\subtests.py'>
+          plugin_name: subtests
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'pytest_cov.plugin' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\pytest_cov\\plugin.py'>
+          plugin_name: pytest_cov
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=9 _state='suspended' tmpfile=<EncodedFile name='<tempfile._TemporaryFileWrapper object at 0x00000299A9D11BE0>' mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=11 _state='suspended' tmpfile=<EncodedFile name='<tempfile._TemporaryFileWrapper object at 0x00000299A9C77B10>' mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=7 _state='started' tmpfile=<_io.TextIOWrapper name='nul' mode='r' encoding='utf-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
+          plugin_name: capturemanager
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <pytest_cov.plugin.CovPlugin object at 0x00000299A9D11FD0>
+          plugin_name: _cov
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          plugin_name: session
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x00000299ABFC2660>
+          plugin_name: lfplugin
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x00000299ABFC2CF0>
+          plugin_name: nfplugin
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
+          plugin_name: legacypath-tmpdir
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalReporter object at 0x00000299ABFC3620>
+          plugin_name: terminalreporter
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalProgressPlugin object at 0x00000299AC0FD2B0>
+          plugin_name: terminalprogress
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.logging.LoggingPlugin object at 0x00000299AC0FD550>
+          plugin_name: logging-plugin
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+    finish pytest_configure --> [] [hook]
+    pytest_sessionstart [hook]
+        session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+          plugin_name: 2859000435712
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          plugin_name: pytestconfig
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.mark' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\mark\\__init__.py'>
+          plugin_name: mark
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.main' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\main.py'>
+          plugin_name: main
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.runner' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\runner.py'>
+          plugin_name: runner
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.fixtures' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\fixtures.py'>
+          plugin_name: fixtures
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.helpconfig' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\helpconfig.py'>
+          plugin_name: helpconfig
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\python.py'>
+          plugin_name: python
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.terminal' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\terminal.py'>
+          plugin_name: terminal
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.debugging' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\debugging.py'>
+          plugin_name: debugging
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unittest' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\unittest.py'>
+          plugin_name: unittest
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.capture' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\capture.py'>
+          plugin_name: capture
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.skipping' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\skipping.py'>
+          plugin_name: skipping
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.legacypath' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\legacypath.py'>
+          plugin_name: legacypath
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.tmpdir' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\tmpdir.py'>
+          plugin_name: tmpdir
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.monkeypatch' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\monkeypatch.py'>
+          plugin_name: monkeypatch
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.recwarn' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\recwarn.py'>
+          plugin_name: recwarn
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.pastebin' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\pastebin.py'>
+          plugin_name: pastebin
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.assertion' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\__init__.py'>
+          plugin_name: assertion
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.junitxml' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\junitxml.py'>
+          plugin_name: junitxml
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.doctest' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\doctest.py'>
+          plugin_name: doctest
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.cacheprovider' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\cacheprovider.py'>
+          plugin_name: cacheprovider
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setuponly' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\setuponly.py'>
+          plugin_name: setuponly
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setupplan' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\setupplan.py'>
+          plugin_name: setupplan
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.stepwise' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\stepwise.py'>
+          plugin_name: stepwise
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unraisableexception' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\unraisableexception.py'>
+          plugin_name: unraisableexception
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.threadexception' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\threadexception.py'>
+          plugin_name: threadexception
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.warnings' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\warnings.py'>
+          plugin_name: warnings
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.logging' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\logging.py'>
+          plugin_name: logging
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.reports' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\reports.py'>
+          plugin_name: reports
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.faulthandler' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\faulthandler.py'>
+          plugin_name: faulthandler
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.subtests' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\subtests.py'>
+          plugin_name: subtests
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'pytest_cov.plugin' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\pytest_cov\\plugin.py'>
+          plugin_name: pytest_cov
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=9 _state='suspended' tmpfile=<EncodedFile name='<tempfile._TemporaryFileWrapper object at 0x00000299A9D11BE0>' mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=11 _state='suspended' tmpfile=<EncodedFile name='<tempfile._TemporaryFileWrapper object at 0x00000299A9C77B10>' mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=7 _state='started' tmpfile=<_io.TextIOWrapper name='nul' mode='r' encoding='utf-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
+          plugin_name: capturemanager
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <pytest_cov.plugin.CovPlugin object at 0x00000299A9D11FD0>
+          plugin_name: _cov
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          plugin_name: session
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x00000299ABFC2660>
+          plugin_name: lfplugin
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x00000299ABFC2CF0>
+          plugin_name: nfplugin
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
+          plugin_name: legacypath-tmpdir
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalReporter object at 0x00000299ABFC3620>
+          plugin_name: terminalreporter
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalProgressPlugin object at 0x00000299AC0FD2B0>
+          plugin_name: terminalprogress
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.logging.LoggingPlugin object at 0x00000299AC0FD550>
+          plugin_name: logging-plugin
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.fixtures.FixtureManager object at 0x00000299AC0FE270>
+          plugin_name: funcmanage
+          manager: <_pytest.config.PytestPluginManager object at 0x00000299A9B49400>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_report_header [hook]
+          config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          start_path: C:\Users\turni\projects\sscs\sscs_assn_1
+          startdir: C:\Users\turni\projects\sscs\sscs_assn_1
+      early skip of rewriting module: importlib.metadata._adapters [assertion]
+      early skip of rewriting module: email.message [assertion]
+      early skip of rewriting module: quopri [assertion]
+      early skip of rewriting module: email.utils [assertion]
+      early skip of rewriting module: urllib [assertion]
+      early skip of rewriting module: urllib.parse [assertion]
+      early skip of rewriting module: ipaddress [assertion]
+      early skip of rewriting module: email._parseaddr [assertion]
+      early skip of rewriting module: email.errors [assertion]
+      early skip of rewriting module: email._policybase [assertion]
+      early skip of rewriting module: email.header [assertion]
+      early skip of rewriting module: email.quoprimime [assertion]
+      early skip of rewriting module: email.base64mime [assertion]
+      early skip of rewriting module: email.charset [assertion]
+      early skip of rewriting module: email.encoders [assertion]
+      early skip of rewriting module: email._encoded_words [assertion]
+      early skip of rewriting module: email.iterators [assertion]
+      early skip of rewriting module: importlib.metadata._text [assertion]
+      early skip of rewriting module: email.parser [assertion]
+      early skip of rewriting module: email.feedparser [assertion]
+      finish pytest_report_header --> [['rootdir: C:\\Users\\turni\\projects\\sscs\\sscs_assn_1', 'configfile: pyproject.toml', 'plugins: cov-7.0.0'], ['using: pytest-9.0.0', 'registered third-party plugins:', '  pytest-cov-7.0.0 at C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\pytest_cov\\plugin.py']] [hook]
+    finish pytest_sessionstart --> [] [hook]
+    pytest_collection [hook]
+        session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+    perform_collect <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0> ['tests/'] [collection]
+        pytest_collectstart [hook]
+            collector: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        finish pytest_collectstart --> [] [hook]
+        pytest_make_collect_report [hook]
+            collector: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        processing argument CollectionArgument(path=WindowsPath('C:/Users/turni/projects/sscs/sscs_assn_1/tests'), parts=[], parametrization=None, module_name=None, original_index=0) [collection]
+            pytest_collect_directory [hook]
+                path: C:\Users\turni\projects\sscs\sscs_assn_1
+                parent: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+            finish pytest_collect_directory --> <Dir sscs_assn_1> [hook]
+            pytest_collectstart [hook]
+                collector: <Dir sscs_assn_1>
+            finish pytest_collectstart --> [] [hook]
+            pytest_make_collect_report [hook]
+                collector: <Dir sscs_assn_1>
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\.git
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\.git
+              finish pytest_ignore_collect --> True [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\.gitignore
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\.gitignore
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_file [hook]
+                  parent: <Dir sscs_assn_1>
+                  file_path: C:\Users\turni\projects\sscs\sscs_assn_1\.gitignore
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\.gitignore
+              finish pytest_collect_file --> [] [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\.pre-commit-config.yaml
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\.pre-commit-config.yaml
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_file [hook]
+                  parent: <Dir sscs_assn_1>
+                  file_path: C:\Users\turni\projects\sscs\sscs_assn_1\.pre-commit-config.yaml
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\.pre-commit-config.yaml
+              finish pytest_collect_file --> [] [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\.pytest_cache
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\.pytest_cache
+              finish pytest_ignore_collect --> True [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\CODEOWNERS
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\CODEOWNERS
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_file [hook]
+                  parent: <Dir sscs_assn_1>
+                  file_path: C:\Users\turni\projects\sscs\sscs_assn_1\CODEOWNERS
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\CODEOWNERS
+              finish pytest_collect_file --> [] [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\CONTRIBUTING.md
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\CONTRIBUTING.md
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_file [hook]
+                  parent: <Dir sscs_assn_1>
+                  file_path: C:\Users\turni\projects\sscs\sscs_assn_1\CONTRIBUTING.md
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\CONTRIBUTING.md
+              finish pytest_collect_file --> [] [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\LICENSE
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\LICENSE
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_file [hook]
+                  parent: <Dir sscs_assn_1>
+                  file_path: C:\Users\turni\projects\sscs\sscs_assn_1\LICENSE
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\LICENSE
+              finish pytest_collect_file --> [] [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\README.md
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\README.md
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_file [hook]
+                  parent: <Dir sscs_assn_1>
+                  file_path: C:\Users\turni\projects\sscs\sscs_assn_1\README.md
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\README.md
+              finish pytest_collect_file --> [] [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\SECURITY.md
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\SECURITY.md
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_file [hook]
+                  parent: <Dir sscs_assn_1>
+                  file_path: C:\Users\turni\projects\sscs\sscs_assn_1\SECURITY.md
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\SECURITY.md
+              finish pytest_collect_file --> [] [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\artifact.bundle
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\artifact.bundle
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_file [hook]
+                  parent: <Dir sscs_assn_1>
+                  file_path: C:\Users\turni\projects\sscs\sscs_assn_1\artifact.bundle
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\artifact.bundle
+              finish pytest_collect_file --> [] [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\dist
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\dist
+              finish pytest_ignore_collect --> True [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\poetry.lock
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\poetry.lock
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_file [hook]
+                  parent: <Dir sscs_assn_1>
+                  file_path: C:\Users\turni\projects\sscs\sscs_assn_1\poetry.lock
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\poetry.lock
+              finish pytest_collect_file --> [] [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\pyproject.toml
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\pyproject.toml
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_file [hook]
+                  parent: <Dir sscs_assn_1>
+                  file_path: C:\Users\turni\projects\sscs\sscs_assn_1\pyproject.toml
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\pyproject.toml
+              finish pytest_collect_file --> [] [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\python-rekor-monitor-template-main
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\python-rekor-monitor-template-main
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_directory [hook]
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\python-rekor-monitor-template-main
+                  parent: <Dir sscs_assn_1>
+              finish pytest_collect_directory --> <Dir python-rekor-monitor-template-main> [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\src
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\src
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_directory [hook]
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\src
+                  parent: <Dir sscs_assn_1>
+              finish pytest_collect_directory --> <Dir src> [hook]
+              pytest_collect_directory [hook]
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\tests
+                  parent: <Dir sscs_assn_1>
+              finish pytest_collect_directory --> <Package tests> [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+                  collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\trace
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\trace
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_file [hook]
+                  parent: <Dir sscs_assn_1>
+                  file_path: C:\Users\turni\projects\sscs\sscs_assn_1\trace
+                  path: C:\Users\turni\projects\sscs\sscs_assn_1\trace
+              finish pytest_collect_file --> [] [hook]
+            finish pytest_make_collect_report --> <CollectReport '.' lenresult=3 outcome='passed'> [hook]
+        finish pytest_make_collect_report --> <CollectReport '' lenresult=1 outcome='passed'> [hook]
+        pytest_collectreport [hook]
+            report: <CollectReport '' lenresult=1 outcome='passed'>
+        finish pytest_collectreport --> [] [hook]
+    genitems <Package tests> [collection]
+      pytest_collectstart [hook]
+          collector: <Package tests>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Package tests>
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\__init__.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\__init__.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package tests>
+            file_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\__init__.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\__init__.py
+        finish pytest_collect_file --> [] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\__pycache__
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\__pycache__
+        finish pytest_ignore_collect --> True [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_checkpoint.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_checkpoint.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package tests>
+            file_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_checkpoint.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_checkpoint.py
+          pytest_pycollect_makemodule [hook]
+              parent: <Package tests>
+              module_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_checkpoint.py
+              path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_checkpoint.py
+          finish pytest_pycollect_makemodule --> <Module test_checkpoint.py> [hook]
+        finish pytest_collect_file --> [<Module test_checkpoint.py>] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package tests>
+            file_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency.py
+          pytest_pycollect_makemodule [hook]
+              parent: <Package tests>
+              module_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency.py
+              path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency.py
+          finish pytest_pycollect_makemodule --> <Module test_consistency.py> [hook]
+        finish pytest_collect_file --> [<Module test_consistency.py>] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package tests>
+            file_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput.py
+          pytest_pycollect_makemodule [hook]
+              parent: <Package tests>
+              module_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput.py
+              path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput.py
+          finish pytest_pycollect_makemodule --> <Module test_consistency_wronginput.py> [hook]
+        finish pytest_collect_file --> [<Module test_consistency_wronginput.py>] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput2.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput2.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package tests>
+            file_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput2.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput2.py
+          pytest_pycollect_makemodule [hook]
+              parent: <Package tests>
+              module_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput2.py
+              path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput2.py
+          finish pytest_pycollect_makemodule --> <Module test_consistency_wronginput2.py> [hook]
+        finish pytest_collect_file --> [<Module test_consistency_wronginput2.py>] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistencyfail.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistencyfail.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package tests>
+            file_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistencyfail.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistencyfail.py
+          pytest_pycollect_makemodule [hook]
+              parent: <Package tests>
+              module_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistencyfail.py
+              path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistencyfail.py
+          finish pytest_pycollect_makemodule --> <Module test_consistencyfail.py> [hook]
+        finish pytest_collect_file --> [<Module test_consistencyfail.py>] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_empty.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_empty.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package tests>
+            file_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_empty.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_empty.py
+          pytest_pycollect_makemodule [hook]
+              parent: <Package tests>
+              module_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_empty.py
+              path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_empty.py
+          finish pytest_pycollect_makemodule --> <Module test_empty.py> [hook]
+        finish pytest_collect_file --> [<Module test_empty.py>] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package tests>
+            file_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion.py
+          pytest_pycollect_makemodule [hook]
+              parent: <Package tests>
+              module_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion.py
+              path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion.py
+          finish pytest_pycollect_makemodule --> <Module test_inclusion.py> [hook]
+        finish pytest_collect_file --> [<Module test_inclusion.py>] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package tests>
+            file_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput.py
+          pytest_pycollect_makemodule [hook]
+              parent: <Package tests>
+              module_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput.py
+              path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput.py
+          finish pytest_pycollect_makemodule --> <Module test_inclusion_wronginput.py> [hook]
+        finish pytest_collect_file --> [<Module test_inclusion_wronginput.py>] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput2.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput2.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package tests>
+            file_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput2.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput2.py
+          pytest_pycollect_makemodule [hook]
+              parent: <Package tests>
+              module_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput2.py
+              path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput2.py
+          finish pytest_pycollect_makemodule --> <Module test_inclusion_wronginput2.py> [hook]
+        finish pytest_collect_file --> [<Module test_inclusion_wronginput2.py>] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            collection_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusionfail.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusionfail.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package tests>
+            file_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusionfail.py
+            path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusionfail.py
+          pytest_pycollect_makemodule [hook]
+              parent: <Package tests>
+              module_path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusionfail.py
+              path: C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusionfail.py
+          finish pytest_pycollect_makemodule --> <Module test_inclusionfail.py> [hook]
+        finish pytest_collect_file --> [<Module test_inclusionfail.py>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests' lenresult=10 outcome='passed'> [hook]
+    genitems <Module test_checkpoint.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module test_checkpoint.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module test_checkpoint.py>
+      find_module called for: tests [assertion]
+      find_module called for: tests.test_checkpoint [assertion]
+      matched test file 'C:\\Users\\turni\\projects\\sscs\\sscs_assn_1\\tests\\test_checkpoint.py' [assertion]
+      _read_pyc(C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_checkpoint.py): out of date [assertion]
+      rewriting WindowsPath('C:/Users/turni/projects/sscs/sscs_assn_1/tests/test_checkpoint.py') [assertion]
+      early skip of rewriting module: jsonschema [assertion]
+      early skip of rewriting module: jsonschema._format [assertion]
+      early skip of rewriting module: jsonschema.exceptions [assertion]
+      early skip of rewriting module: attrs [assertion]
+      early skip of rewriting module: attr [assertion]
+      early skip of rewriting module: attr.converters [assertion]
+      early skip of rewriting module: attr._compat [assertion]
+      early skip of rewriting module: attr._make [assertion]
+      early skip of rewriting module: attr._config [assertion]
+      early skip of rewriting module: attr.setters [assertion]
+      early skip of rewriting module: attr.exceptions [assertion]
+      early skip of rewriting module: attr.filters [assertion]
+      early skip of rewriting module: attr.validators [assertion]
+      early skip of rewriting module: attr._cmp [assertion]
+      early skip of rewriting module: attr._funcs [assertion]
+      early skip of rewriting module: attr._next_gen [assertion]
+      early skip of rewriting module: attr._version_info [assertion]
+      early skip of rewriting module: attrs.converters [assertion]
+      early skip of rewriting module: attrs.exceptions [assertion]
+      early skip of rewriting module: attrs.filters [assertion]
+      early skip of rewriting module: attrs.setters [assertion]
+      early skip of rewriting module: attrs.validators [assertion]
+      early skip of rewriting module: referencing [assertion]
+      early skip of rewriting module: referencing._core [assertion]
+      early skip of rewriting module: rpds [assertion]
+      early skip of rewriting module: rpds.rpds [assertion]
+      early skip of rewriting module: typing_extensions [assertion]
+      early skip of rewriting module: referencing.exceptions [assertion]
+      early skip of rewriting module: referencing._attrs [assertion]
+      early skip of rewriting module: referencing.typing [assertion]
+      early skip of rewriting module: jsonschema._utils [assertion]
+      early skip of rewriting module: fqdn [assertion]
+      early skip of rewriting module: idna [assertion]
+      early skip of rewriting module: rfc3987 [assertion]
+      early skip of rewriting module: rfc3986_validator [assertion]
+      early skip of rewriting module: rfc3987_syntax [assertion]
+      early skip of rewriting module: rfc3339_validator [assertion]
+      early skip of rewriting module: webcolors [assertion]
+      early skip of rewriting module: jsonpointer [assertion]
+      early skip of rewriting module: uri_template [assertion]
+      early skip of rewriting module: isoduration [assertion]
+      early skip of rewriting module: jsonschema._types [assertion]
+      early skip of rewriting module: jsonschema.validators [assertion]
+      early skip of rewriting module: urllib.request [assertion]
+      early skip of rewriting module: http [assertion]
+      early skip of rewriting module: http.client [assertion]
+      early skip of rewriting module: ssl [assertion]
+      early skip of rewriting module: _ssl [assertion]
+      early skip of rewriting module: urllib.error [assertion]
+      early skip of rewriting module: urllib.response [assertion]
+      early skip of rewriting module: nturl2path [assertion]
+      early skip of rewriting module: jsonschema_specifications [assertion]
+      early skip of rewriting module: referencing.jsonschema [assertion]
+      early skip of rewriting module: jsonschema_specifications._core [assertion]
+      early skip of rewriting module: importlib.resources._adapters [assertion]
+      early skip of rewriting module: importlib.readers [assertion]
+      early skip of rewriting module: jsonschema._keywords [assertion]
+      early skip of rewriting module: fractions [assertion]
+      early skip of rewriting module: jsonschema._legacy_keywords [assertion]
+      early skip of rewriting module: jsonschema._typing [assertion]
+      early skip of rewriting module: jsonschema.protocols [assertion]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_checkpoint.py>
+            name: @py_builtins
+            obj: <module 'builtins' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_checkpoint.py>
+            name: @pytest_ar
+            obj: <module '_pytest.assertion.rewrite' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_checkpoint.py>
+            name: sys
+            obj: <module 'sys' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_checkpoint.py>
+            name: json
+            obj: <module 'json' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_checkpoint.py>
+            name: validate
+            obj: <function validate at 0x00000299AC4CF600>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_checkpoint.py>
+            name: subprocess
+            obj: <module 'subprocess' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_checkpoint.py>
+            name: checkpoint_schema
+            obj: {'type': 'object', 'properties': {'inactiveShards': {'type': 'array'}, 'rootHash': {'type': 'string'}, 'signedTreeHead': {'type': 'string'}, 'treeID': {'type': 'string'}, 'treeSize': {'type': 'integer'}}, 'required': ['inactiveShards', 'rootHash', 'signedTreeHead', 'treeID', 'treeSize']}
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_checkpoint.py>
+            name: test_checkpoint
+            obj: <function test_checkpoint at 0x00000299AC215620>
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x00000299AC2C3CB0>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_checkpoint>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_checkpoint.py' lenresult=1 outcome='passed'> [hook]
+    genitems <Function test_checkpoint> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_checkpoint>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_checkpoint.py' lenresult=1 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+    genitems <Module test_consistency.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module test_consistency.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module test_consistency.py>
+      find_module called for: tests.test_consistency [assertion]
+      matched test file 'C:\\Users\\turni\\projects\\sscs\\sscs_assn_1\\tests\\test_consistency.py' [assertion]
+      found cached rewritten pyc for C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency.py [assertion]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency.py>
+            name: @py_builtins
+            obj: <module 'builtins' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency.py>
+            name: @pytest_ar
+            obj: <module '_pytest.assertion.rewrite' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency.py>
+            name: sys
+            obj: <module 'sys' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency.py>
+            name: json
+            obj: <module 'json' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency.py>
+            name: validate
+            obj: <function validate at 0x00000299AC4CF600>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency.py>
+            name: subprocess
+            obj: <module 'subprocess' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency.py>
+            name: test_consistency
+            obj: <function test_consistency at 0x00000299AC4B20C0>
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x00000299AC498E10>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_consistency>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_consistency.py' lenresult=1 outcome='passed'> [hook]
+    genitems <Function test_consistency> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_consistency>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_consistency.py' lenresult=1 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+    genitems <Module test_consistency_wronginput.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module test_consistency_wronginput.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module test_consistency_wronginput.py>
+      find_module called for: tests.test_consistency_wronginput [assertion]
+      matched test file 'C:\\Users\\turni\\projects\\sscs\\sscs_assn_1\\tests\\test_consistency_wronginput.py' [assertion]
+      found cached rewritten pyc for C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput.py [assertion]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput.py>
+            name: @py_builtins
+            obj: <module 'builtins' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput.py>
+            name: @pytest_ar
+            obj: <module '_pytest.assertion.rewrite' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput.py>
+            name: sys
+            obj: <module 'sys' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput.py>
+            name: json
+            obj: <module 'json' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput.py>
+            name: validate
+            obj: <function validate at 0x00000299AC4CF600>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput.py>
+            name: subprocess
+            obj: <module 'subprocess' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput.py>
+            name: test_consistency_wronginput
+            obj: <function test_consistency_wronginput at 0x00000299AC4B2A20>
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x00000299AC498F50>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_consistency_wronginput>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_consistency_wronginput.py' lenresult=1 outcome='passed'> [hook]
+    genitems <Function test_consistency_wronginput> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_consistency_wronginput>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_consistency_wronginput.py' lenresult=1 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+    genitems <Module test_consistency_wronginput2.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module test_consistency_wronginput2.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module test_consistency_wronginput2.py>
+      find_module called for: tests.test_consistency_wronginput2 [assertion]
+      matched test file 'C:\\Users\\turni\\projects\\sscs\\sscs_assn_1\\tests\\test_consistency_wronginput2.py' [assertion]
+      found cached rewritten pyc for C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistency_wronginput2.py [assertion]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput2.py>
+            name: @py_builtins
+            obj: <module 'builtins' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput2.py>
+            name: @pytest_ar
+            obj: <module '_pytest.assertion.rewrite' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput2.py>
+            name: sys
+            obj: <module 'sys' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput2.py>
+            name: json
+            obj: <module 'json' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput2.py>
+            name: validate
+            obj: <function validate at 0x00000299AC4CF600>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput2.py>
+            name: subprocess
+            obj: <module 'subprocess' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistency_wronginput2.py>
+            name: test_consistency_wronginput2
+            obj: <function test_consistency_wronginput2 at 0x00000299AC4B0D60>
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x00000299AC36F6F0>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_consistency_wronginput2>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_consistency_wronginput2.py' lenresult=1 outcome='passed'> [hook]
+    genitems <Function test_consistency_wronginput2> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_consistency_wronginput2>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_consistency_wronginput2.py' lenresult=1 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+    genitems <Module test_consistencyfail.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module test_consistencyfail.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module test_consistencyfail.py>
+      find_module called for: tests.test_consistencyfail [assertion]
+      matched test file 'C:\\Users\\turni\\projects\\sscs\\sscs_assn_1\\tests\\test_consistencyfail.py' [assertion]
+      found cached rewritten pyc for C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_consistencyfail.py [assertion]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistencyfail.py>
+            name: @py_builtins
+            obj: <module 'builtins' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistencyfail.py>
+            name: @pytest_ar
+            obj: <module '_pytest.assertion.rewrite' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistencyfail.py>
+            name: sys
+            obj: <module 'sys' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistencyfail.py>
+            name: json
+            obj: <module 'json' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistencyfail.py>
+            name: validate
+            obj: <function validate at 0x00000299AC4CF600>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistencyfail.py>
+            name: subprocess
+            obj: <module 'subprocess' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_consistencyfail.py>
+            name: test_consistency_fail
+            obj: <function test_consistency_fail at 0x00000299AC4B0C20>
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x00000299AC36F5C0>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_consistency_fail>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_consistencyfail.py' lenresult=1 outcome='passed'> [hook]
+    genitems <Function test_consistency_fail> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_consistency_fail>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_consistencyfail.py' lenresult=1 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+    genitems <Module test_empty.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module test_empty.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module test_empty.py>
+      find_module called for: tests.test_empty [assertion]
+      matched test file 'C:\\Users\\turni\\projects\\sscs\\sscs_assn_1\\tests\\test_empty.py' [assertion]
+      found cached rewritten pyc for C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_empty.py [assertion]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_empty.py>
+            name: @py_builtins
+            obj: <module 'builtins' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_empty.py>
+            name: @pytest_ar
+            obj: <module '_pytest.assertion.rewrite' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_empty.py>
+            name: sys
+            obj: <module 'sys' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_empty.py>
+            name: json
+            obj: <module 'json' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_empty.py>
+            name: validate
+            obj: <function validate at 0x00000299AC4CF600>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_empty.py>
+            name: subprocess
+            obj: <module 'subprocess' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_empty.py>
+            name: test_empty
+            obj: <function test_empty at 0x00000299AC4B0360>
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x00000299AC42A330>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_empty>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_empty.py' lenresult=1 outcome='passed'> [hook]
+    genitems <Function test_empty> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_empty>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_empty.py' lenresult=1 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+    genitems <Module test_inclusion.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module test_inclusion.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module test_inclusion.py>
+      find_module called for: tests.test_inclusion [assertion]
+      matched test file 'C:\\Users\\turni\\projects\\sscs\\sscs_assn_1\\tests\\test_inclusion.py' [assertion]
+      found cached rewritten pyc for C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion.py [assertion]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion.py>
+            name: @py_builtins
+            obj: <module 'builtins' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion.py>
+            name: @pytest_ar
+            obj: <module '_pytest.assertion.rewrite' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion.py>
+            name: sys
+            obj: <module 'sys' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion.py>
+            name: json
+            obj: <module 'json' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion.py>
+            name: validate
+            obj: <function validate at 0x00000299AC4CF600>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion.py>
+            name: subprocess
+            obj: <module 'subprocess' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion.py>
+            name: test_inclusion
+            obj: <function test_inclusion at 0x00000299AC4B0040>
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x00000299AC455D00>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_inclusion>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_inclusion.py' lenresult=1 outcome='passed'> [hook]
+    genitems <Function test_inclusion> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_inclusion>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_inclusion.py' lenresult=1 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+    genitems <Module test_inclusion_wronginput.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module test_inclusion_wronginput.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module test_inclusion_wronginput.py>
+      find_module called for: tests.test_inclusion_wronginput [assertion]
+      matched test file 'C:\\Users\\turni\\projects\\sscs\\sscs_assn_1\\tests\\test_inclusion_wronginput.py' [assertion]
+      found cached rewritten pyc for C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput.py [assertion]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput.py>
+            name: @py_builtins
+            obj: <module 'builtins' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput.py>
+            name: @pytest_ar
+            obj: <module '_pytest.assertion.rewrite' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput.py>
+            name: sys
+            obj: <module 'sys' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput.py>
+            name: json
+            obj: <module 'json' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput.py>
+            name: validate
+            obj: <function validate at 0x00000299AC4CF600>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput.py>
+            name: subprocess
+            obj: <module 'subprocess' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput.py>
+            name: test_inclusion_wronginput
+            obj: <function test_inclusion_wronginput at 0x00000299AC4A7880>
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x00000299AC455D00>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_inclusion_wronginput>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_inclusion_wronginput.py' lenresult=1 outcome='passed'> [hook]
+    genitems <Function test_inclusion_wronginput> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_inclusion_wronginput>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_inclusion_wronginput.py' lenresult=1 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+    genitems <Module test_inclusion_wronginput2.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module test_inclusion_wronginput2.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module test_inclusion_wronginput2.py>
+      find_module called for: tests.test_inclusion_wronginput2 [assertion]
+      matched test file 'C:\\Users\\turni\\projects\\sscs\\sscs_assn_1\\tests\\test_inclusion_wronginput2.py' [assertion]
+      found cached rewritten pyc for C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusion_wronginput2.py [assertion]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput2.py>
+            name: @py_builtins
+            obj: <module 'builtins' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput2.py>
+            name: @pytest_ar
+            obj: <module '_pytest.assertion.rewrite' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput2.py>
+            name: sys
+            obj: <module 'sys' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput2.py>
+            name: json
+            obj: <module 'json' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput2.py>
+            name: validate
+            obj: <function validate at 0x00000299AC4CF600>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput2.py>
+            name: subprocess
+            obj: <module 'subprocess' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusion_wronginput2.py>
+            name: test_inclusion_wronginput2
+            obj: <function test_inclusion_wronginput2 at 0x00000299AC4A7920>
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x00000299AC4D4450>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_inclusion_wronginput2>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_inclusion_wronginput2.py' lenresult=1 outcome='passed'> [hook]
+    genitems <Function test_inclusion_wronginput2> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_inclusion_wronginput2>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_inclusion_wronginput2.py' lenresult=1 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+    genitems <Module test_inclusionfail.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module test_inclusionfail.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module test_inclusionfail.py>
+      find_module called for: tests.test_inclusionfail [assertion]
+      matched test file 'C:\\Users\\turni\\projects\\sscs\\sscs_assn_1\\tests\\test_inclusionfail.py' [assertion]
+      found cached rewritten pyc for C:\Users\turni\projects\sscs\sscs_assn_1\tests\test_inclusionfail.py [assertion]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusionfail.py>
+            name: @py_builtins
+            obj: <module 'builtins' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusionfail.py>
+            name: @pytest_ar
+            obj: <module '_pytest.assertion.rewrite' from 'C:\\Users\\turni\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\sscs-assn4-lEBcfax--py3.13\\Lib\\site-packages\\_pytest\\assertion\\rewrite.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusionfail.py>
+            name: sys
+            obj: <module 'sys' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusionfail.py>
+            name: json
+            obj: <module 'json' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusionfail.py>
+            name: validate
+            obj: <function validate at 0x00000299AC4CF600>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusionfail.py>
+            name: subprocess
+            obj: <module 'subprocess' from 'C:\\Users\\turni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module test_inclusionfail.py>
+            name: test_inclusion_fail
+            obj: <function test_inclusion_fail at 0x00000299AC4A6F20>
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x00000299AC4D4550>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_inclusion_fail>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_inclusionfail.py' lenresult=1 outcome='passed'> [hook]
+    genitems <Function test_inclusion_fail> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_inclusion_fail>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_inclusionfail.py' lenresult=1 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests' lenresult=10 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+      pytest_collection_modifyitems [hook]
+          session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          items: [<Function test_checkpoint>, <Function test_consistency>, <Function test_consistency_wronginput>, <Function test_consistency_wronginput2>, <Function test_consistency_fail>, <Function test_empty>, <Function test_inclusion>, <Function test_inclusion_wronginput>, <Function test_inclusion_wronginput2>, <Function test_inclusion_fail>]
+      finish pytest_collection_modifyitems --> [] [hook]
+      pytest_collection_finish [hook]
+          session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        pytest_report_collectionfinish [hook]
+            config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+            items: [<Function test_checkpoint>, <Function test_consistency>, <Function test_consistency_wronginput>, <Function test_consistency_wronginput2>, <Function test_consistency_fail>, <Function test_empty>, <Function test_inclusion>, <Function test_inclusion_wronginput>, <Function test_inclusion_wronginput2>, <Function test_inclusion_fail>]
+            start_path: C:\Users\turni\projects\sscs\sscs_assn_1
+            startdir: C:\Users\turni\projects\sscs\sscs_assn_1
+        finish pytest_report_collectionfinish --> [] [hook]
+      finish pytest_collection_finish --> [] [hook]
+    finish pytest_collection --> None [hook]
+    pytest_runtestloop [hook]
+        session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=10>
+      pytest_runtest_protocol [hook]
+          item: <Function test_checkpoint>
+          nextitem: <Function test_consistency>
+        pytest_runtest_logstart [hook]
+            nodeid: tests/test_checkpoint.py::test_checkpoint
+            location: ('tests\\test_checkpoint.py', 17, 'test_checkpoint')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_checkpoint>
+        finish pytest_runtest_setup --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_checkpoint>
+            call: <CallInfo when='setup' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_checkpoint.py::test_checkpoint' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_checkpoint.py::test_checkpoint' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_checkpoint.py::test_checkpoint' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_checkpoint>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_checkpoint>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_checkpoint>
+            call: <CallInfo when='call' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_checkpoint.py::test_checkpoint' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_checkpoint.py::test_checkpoint' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_checkpoint.py::test_checkpoint' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_checkpoint>
+            nextitem: <Function test_consistency>
+        finish pytest_runtest_teardown --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_checkpoint>
+            call: <CallInfo when='teardown' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_checkpoint.py::test_checkpoint' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_checkpoint.py::test_checkpoint' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_checkpoint.py::test_checkpoint' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/test_checkpoint.py::test_checkpoint
+            location: ('tests\\test_checkpoint.py', 17, 'test_checkpoint')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_consistency>
+          nextitem: <Function test_consistency_wronginput>
+        pytest_runtest_logstart [hook]
+            nodeid: tests/test_consistency.py::test_consistency
+            location: ('tests\\test_consistency.py', 5, 'test_consistency')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_consistency>
+        finish pytest_runtest_setup --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency>
+            call: <CallInfo when='setup' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistency.py::test_consistency' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistency.py::test_consistency' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistency.py::test_consistency' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_consistency>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_consistency>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency>
+            call: <CallInfo when='call' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistency.py::test_consistency' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistency.py::test_consistency' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistency.py::test_consistency' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_consistency>
+            nextitem: <Function test_consistency_wronginput>
+        finish pytest_runtest_teardown --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency>
+            call: <CallInfo when='teardown' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistency.py::test_consistency' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistency.py::test_consistency' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistency.py::test_consistency' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/test_consistency.py::test_consistency
+            location: ('tests\\test_consistency.py', 5, 'test_consistency')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_consistency_wronginput>
+          nextitem: <Function test_consistency_wronginput2>
+        pytest_runtest_logstart [hook]
+            nodeid: tests/test_consistency_wronginput.py::test_consistency_wronginput
+            location: ('tests\\test_consistency_wronginput.py', 5, 'test_consistency_wronginput')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_consistency_wronginput>
+        finish pytest_runtest_setup --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency_wronginput>
+            call: <CallInfo when='setup' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistency_wronginput.py::test_consistency_wronginput' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistency_wronginput.py::test_consistency_wronginput' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistency_wronginput.py::test_consistency_wronginput' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_consistency_wronginput>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_consistency_wronginput>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency_wronginput>
+            call: <CallInfo when='call' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistency_wronginput.py::test_consistency_wronginput' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistency_wronginput.py::test_consistency_wronginput' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistency_wronginput.py::test_consistency_wronginput' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_consistency_wronginput>
+            nextitem: <Function test_consistency_wronginput2>
+        finish pytest_runtest_teardown --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency_wronginput>
+            call: <CallInfo when='teardown' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistency_wronginput.py::test_consistency_wronginput' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistency_wronginput.py::test_consistency_wronginput' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistency_wronginput.py::test_consistency_wronginput' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/test_consistency_wronginput.py::test_consistency_wronginput
+            location: ('tests\\test_consistency_wronginput.py', 5, 'test_consistency_wronginput')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_consistency_wronginput2>
+          nextitem: <Function test_consistency_fail>
+        pytest_runtest_logstart [hook]
+            nodeid: tests/test_consistency_wronginput2.py::test_consistency_wronginput2
+            location: ('tests\\test_consistency_wronginput2.py', 5, 'test_consistency_wronginput2')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_consistency_wronginput2>
+        finish pytest_runtest_setup --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency_wronginput2>
+            call: <CallInfo when='setup' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistency_wronginput2.py::test_consistency_wronginput2' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistency_wronginput2.py::test_consistency_wronginput2' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistency_wronginput2.py::test_consistency_wronginput2' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_consistency_wronginput2>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_consistency_wronginput2>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency_wronginput2>
+            call: <CallInfo when='call' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistency_wronginput2.py::test_consistency_wronginput2' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistency_wronginput2.py::test_consistency_wronginput2' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistency_wronginput2.py::test_consistency_wronginput2' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_consistency_wronginput2>
+            nextitem: <Function test_consistency_fail>
+        finish pytest_runtest_teardown --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency_wronginput2>
+            call: <CallInfo when='teardown' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistency_wronginput2.py::test_consistency_wronginput2' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistency_wronginput2.py::test_consistency_wronginput2' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistency_wronginput2.py::test_consistency_wronginput2' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/test_consistency_wronginput2.py::test_consistency_wronginput2
+            location: ('tests\\test_consistency_wronginput2.py', 5, 'test_consistency_wronginput2')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_consistency_fail>
+          nextitem: <Function test_empty>
+        pytest_runtest_logstart [hook]
+            nodeid: tests/test_consistencyfail.py::test_consistency_fail
+            location: ('tests\\test_consistencyfail.py', 5, 'test_consistency_fail')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_consistency_fail>
+        finish pytest_runtest_setup --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency_fail>
+            call: <CallInfo when='setup' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistencyfail.py::test_consistency_fail' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistencyfail.py::test_consistency_fail' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistencyfail.py::test_consistency_fail' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_consistency_fail>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_consistency_fail>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency_fail>
+            call: <CallInfo when='call' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistencyfail.py::test_consistency_fail' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistencyfail.py::test_consistency_fail' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistencyfail.py::test_consistency_fail' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_consistency_fail>
+            nextitem: <Function test_empty>
+        finish pytest_runtest_teardown --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_consistency_fail>
+            call: <CallInfo when='teardown' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_consistencyfail.py::test_consistency_fail' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_consistencyfail.py::test_consistency_fail' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_consistencyfail.py::test_consistency_fail' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/test_consistencyfail.py::test_consistency_fail
+            location: ('tests\\test_consistencyfail.py', 5, 'test_consistency_fail')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_empty>
+          nextitem: <Function test_inclusion>
+        pytest_runtest_logstart [hook]
+            nodeid: tests/test_empty.py::test_empty
+            location: ('tests\\test_empty.py', 5, 'test_empty')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_empty>
+        finish pytest_runtest_setup --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_empty>
+            call: <CallInfo when='setup' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_empty.py::test_empty' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_empty.py::test_empty' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_empty.py::test_empty' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_empty>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_empty>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_empty>
+            call: <CallInfo when='call' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_empty.py::test_empty' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_empty.py::test_empty' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_empty.py::test_empty' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_empty>
+            nextitem: <Function test_inclusion>
+        finish pytest_runtest_teardown --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_empty>
+            call: <CallInfo when='teardown' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_empty.py::test_empty' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_empty.py::test_empty' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_empty.py::test_empty' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/test_empty.py::test_empty
+            location: ('tests\\test_empty.py', 5, 'test_empty')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_inclusion>
+          nextitem: <Function test_inclusion_wronginput>
+        pytest_runtest_logstart [hook]
+            nodeid: tests/test_inclusion.py::test_inclusion
+            location: ('tests\\test_inclusion.py', 5, 'test_inclusion')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_inclusion>
+        finish pytest_runtest_setup --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion>
+            call: <CallInfo when='setup' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusion.py::test_inclusion' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusion.py::test_inclusion' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusion.py::test_inclusion' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_inclusion>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_inclusion>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion>
+            call: <CallInfo when='call' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusion.py::test_inclusion' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusion.py::test_inclusion' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusion.py::test_inclusion' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_inclusion>
+            nextitem: <Function test_inclusion_wronginput>
+        finish pytest_runtest_teardown --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion>
+            call: <CallInfo when='teardown' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusion.py::test_inclusion' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusion.py::test_inclusion' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusion.py::test_inclusion' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/test_inclusion.py::test_inclusion
+            location: ('tests\\test_inclusion.py', 5, 'test_inclusion')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_inclusion_wronginput>
+          nextitem: <Function test_inclusion_wronginput2>
+        pytest_runtest_logstart [hook]
+            nodeid: tests/test_inclusion_wronginput.py::test_inclusion_wronginput
+            location: ('tests\\test_inclusion_wronginput.py', 5, 'test_inclusion_wronginput')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_inclusion_wronginput>
+        finish pytest_runtest_setup --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion_wronginput>
+            call: <CallInfo when='setup' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusion_wronginput.py::test_inclusion_wronginput' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusion_wronginput.py::test_inclusion_wronginput' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusion_wronginput.py::test_inclusion_wronginput' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_inclusion_wronginput>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_inclusion_wronginput>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion_wronginput>
+            call: <CallInfo when='call' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusion_wronginput.py::test_inclusion_wronginput' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusion_wronginput.py::test_inclusion_wronginput' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusion_wronginput.py::test_inclusion_wronginput' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_inclusion_wronginput>
+            nextitem: <Function test_inclusion_wronginput2>
+        finish pytest_runtest_teardown --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion_wronginput>
+            call: <CallInfo when='teardown' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusion_wronginput.py::test_inclusion_wronginput' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusion_wronginput.py::test_inclusion_wronginput' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusion_wronginput.py::test_inclusion_wronginput' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/test_inclusion_wronginput.py::test_inclusion_wronginput
+            location: ('tests\\test_inclusion_wronginput.py', 5, 'test_inclusion_wronginput')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_inclusion_wronginput2>
+          nextitem: <Function test_inclusion_fail>
+        pytest_runtest_logstart [hook]
+            nodeid: tests/test_inclusion_wronginput2.py::test_inclusion_wronginput2
+            location: ('tests\\test_inclusion_wronginput2.py', 5, 'test_inclusion_wronginput2')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_inclusion_wronginput2>
+        finish pytest_runtest_setup --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion_wronginput2>
+            call: <CallInfo when='setup' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusion_wronginput2.py::test_inclusion_wronginput2' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusion_wronginput2.py::test_inclusion_wronginput2' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusion_wronginput2.py::test_inclusion_wronginput2' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_inclusion_wronginput2>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_inclusion_wronginput2>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion_wronginput2>
+            call: <CallInfo when='call' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusion_wronginput2.py::test_inclusion_wronginput2' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusion_wronginput2.py::test_inclusion_wronginput2' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusion_wronginput2.py::test_inclusion_wronginput2' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_inclusion_wronginput2>
+            nextitem: <Function test_inclusion_fail>
+        finish pytest_runtest_teardown --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion_wronginput2>
+            call: <CallInfo when='teardown' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusion_wronginput2.py::test_inclusion_wronginput2' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusion_wronginput2.py::test_inclusion_wronginput2' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusion_wronginput2.py::test_inclusion_wronginput2' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/test_inclusion_wronginput2.py::test_inclusion_wronginput2
+            location: ('tests\\test_inclusion_wronginput2.py', 5, 'test_inclusion_wronginput2')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_inclusion_fail>
+          nextitem: None
+        pytest_runtest_logstart [hook]
+            nodeid: tests/test_inclusionfail.py::test_inclusion_fail
+            location: ('tests\\test_inclusionfail.py', 5, 'test_inclusion_fail')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_inclusion_fail>
+        finish pytest_runtest_setup --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion_fail>
+            call: <CallInfo when='setup' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusionfail.py::test_inclusion_fail' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusionfail.py::test_inclusion_fail' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusionfail.py::test_inclusion_fail' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_inclusion_fail>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_inclusion_fail>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion_fail>
+            call: <CallInfo when='call' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusionfail.py::test_inclusion_fail' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusionfail.py::test_inclusion_fail' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusionfail.py::test_inclusion_fail' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_inclusion_fail>
+            nextitem: None
+        finish pytest_runtest_teardown --> None [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_inclusion_fail>
+            call: <CallInfo when='teardown' result: None>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_inclusionfail.py::test_inclusion_fail' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_inclusionfail.py::test_inclusion_fail' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_inclusionfail.py::test_inclusion_fail' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/test_inclusionfail.py::test_inclusion_fail
+            location: ('tests\\test_inclusionfail.py', 5, 'test_inclusion_fail')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+    finish pytest_runtestloop --> True [hook]
+    pytest_sessionfinish [hook]
+        session: <Session  exitstatus=0 testsfailed=0 testscollected=10>
+        exitstatus: 0
+      pytest_terminal_summary [hook]
+          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x00000299ABFC3620>
+          exitstatus: 0
+          config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+      finish pytest_terminal_summary --> [] [hook]
+    finish pytest_sessionfinish --> [] [hook]
+    pytest_unconfigure [hook]
+        config: <_pytest.config.Config object at 0x00000299A9B4BB60>
+    finish pytest_unconfigure --> [] [hook]

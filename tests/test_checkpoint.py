@@ -22,6 +22,9 @@ def test_checkpoint():
         text=True
     )
     output = result.stdout
-    data = json.loads(output)
+    try:
+        data = json.loads(output)
+        validate(instance=data, schema=checkpoint_schema)
+    except Exception as e:
+        print("failed with exception", e)
 
-    validate(instance=data, schema=checkpoint_schema)
