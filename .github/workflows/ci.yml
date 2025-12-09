@@ -43,13 +43,14 @@ jobs:
           path: ./.venv
           key: ${{ runner.os }}-venv-${{ hashFiles('**/poetry.lock') }}
 
+      - name: Install dependencies
+        run: |
+          pip install pytest pytest-cov requests cryptography jsonschema ruff pylint mypy bandit
+
       - name: Run lint checks
         run: |
-          pip install pytest pytest-cov requests cryptography jsonschema
-          pip install ruff
-          pip install pylint
-          ruff check
-          pylint src
+          ruff check src
+          pylint src --config pyproject.toml
     
       - name: Run mypy
         run: |
@@ -69,5 +70,4 @@ jobs:
 
       - name: Run tests
         run: |
-          pip install pytest pytest-cov requests cryptography jsonschema
           C:\Users\runneradmin\AppData\Roaming\Python\Scripts\poetry run pytest --cov=sscs_assn_1 --cov-report=term-missing
