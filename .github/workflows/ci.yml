@@ -45,16 +45,21 @@ jobs:
 
       - name: Run lint checks
         run: |
+          pip install ruff
+          pip install pylint
           ruff check
           pylint src
     
       - name: Run mypy
         run: |
+          pip install mypy
           mypy --install-types
           mypy main.py merkle_proof.py util.py > mypy.final.txt
 
       - name: Run SAST check
-        run: bandit -r src
+        run: |
+          pip install bandit
+          bandit -r src
 
       - name: Secret Scanning
         uses: trufflesecurity/trufflehog@main
