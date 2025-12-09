@@ -1,0 +1,68 @@
+name: CD Pipeline
+
+on:
+  push:
+    tags:
+      - "*"   
+
+permissions:
+  contents: write     
+  attestations: write 
+  id-token: write     
+
+jobs:
+  build-sbom-attest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Poetry
+        run: |
+          pip install --upgrade pip
+          pip install poetry
+
+      - name: Install dependencies
+        run: poetry install --no-interaction --no-root
+
+      - name: Build project
+        run: poetry build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: dist/*
+
+      - name: Generate SBOM (CycloneDX)
+        run: |
+          pip install cyclonedx-bom
+          cyclonedx-py --format json --output sbom.json
+          cyclonedx-py --format xml  --output sbom.xml
+
+      - name: Upload SBOM artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom
+          path: |
+            sbom.json
+            sbom.xml
+
+      - name: Attest SBOM
+        uses: github/attest-sbom-action@v1
+        with:
+          subject-path: "dist/*"
+          sbom-path: "sbom.json"
+          sbom-format: "cyclonedx-json"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          files: |
+            dist/*
+            sbom.json
+            sbom.xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

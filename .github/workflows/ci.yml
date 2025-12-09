@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     strategy:
       matrix:
         python-version: ['3.10', '3.11', '3.12', '3.13']
@@ -25,18 +25,17 @@ jobs:
       - name: Install Poetry
         run: |
           curl -sSL https://install.python-poetry.org | python3 -
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Install dependencies with Poetry
         run: |
-          poetry install --no-interaction
+          C:\Users\runneradmin\AppData\Roaming\Python\Scripts\poetry install
 
       - name: Set PYTHONPATH to include the source directory
         run: echo "PYTHONPATH=$PWD/sscs_assn_1" >> $GITHUB_ENV
 
       - name: Configure poetry
         run: |
-          poetry config virtualenvs.in-project true
+          C:\Users\runneradmin\AppData\Roaming\Python\Scripts\poetry config virtualenvs.in-project true
 
       - name: Cache the virtualenv
         uses: actions/cache@v4
@@ -48,10 +47,10 @@ jobs:
         run: |
           ruff check
           pylint src
-
+    
       - name: Run mypy
         run: |
-          mypy --install-types --non-interactive
+          mypy --install-types
           mypy main.py merkle_proof.py util.py > mypy.final.txt
 
       - name: Run SAST check
@@ -64,4 +63,4 @@ jobs:
 
       - name: Run tests
         run: |
-          poetry run pytest --cov=sscs_assn_1 --cov-report=term-missing
+          C:\Users\runneradmin\AppData\Roaming\Python\Scripts\poetry run pytest --cov=sscs_assn_1 --cov-report=term-missing
