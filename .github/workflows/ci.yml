@@ -62,7 +62,7 @@ jobs:
       - name: truffletest
         run: |
           curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin
-          /usr/local/bin/trufflehog.exe github --org=trufflesecurity --results=verified,unknown
+          /usr/local/bin/trufflehog github --org=trufflesecurity --results=verified,unknown
 
       - name: Run tests
         run: |
