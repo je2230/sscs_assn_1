@@ -1,4 +1,4 @@
-[![CD Pipeline](https://github.com/je2230/sscs_assn_1/actions/workflows/cd.yml/badge.svg)](https://github.com/je2230/sscs_assn_1/actions/workflows/cd.yml) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11592/badge)](https://www.bestpractices.dev/projects/11592)
+[![CD Pipeline](https://github.com/je2230/sscs_assn_1/actions/workflows/cd.yml/badge.svg)](https://github.com/je2230/sscs_assn_1/actions/workflows/cd.yml) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/je2230/sscs_assn_1/badge)] (https://scorecard.dev/viewer/?uri=github.com/je2230/sscs_assn_1) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11592/badge)](https://www.bestpractices.dev/projects/11592)
 
 # Python Rekor Monitor 
 
