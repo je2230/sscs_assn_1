@@ -68,4 +68,5 @@ jobs:
 
       - name: Run tests
         run: |
+          pip install pytest pytest-cov requests cryptography jsonschema
           C:\Users\runneradmin\AppData\Roaming\Python\Scripts\poetry run pytest --cov=sscs_assn_1 --cov-report=term-missing
