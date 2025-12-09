@@ -49,12 +49,10 @@ jobs:
             sbom.json
             sbom.xml
 
-      - name: Attest SBOM
-        uses: github/attest-sbom-action@v1
+      - uses: actions/attest-sbom@v3
         with:
-          subject-path: "dist/*"
-          sbom-path: "sbom.json"
-          sbom-format: "cyclonedx-json"
+            subject-path: "dist/*"
+            sbom-path: "sbom.json"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
