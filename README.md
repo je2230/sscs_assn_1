@@ -1,3 +1,5 @@
+[![CD Pipeline](https://github.com/je2230/sscs_assn_1/actions/workflows/cd.yml/badge.svg)](https://github.com/je2230/sscs_assn_1/actions/workflows/cd.yml) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/je2230/sscs_assn_1/badge)] [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11592/badge)](https://www.bestpractices.dev/projects/11592)
+
 # Python Rekor Monitor 
 
 This project is a simple Rekor log monitor written in python. You can verify that an artifact has been signed and not modified since signing, get the latest checkpoint, and verify consistency between earlier logs and later logs. 
