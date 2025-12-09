@@ -45,6 +45,7 @@ jobs:
 
       - name: Run lint checks
         run: |
+          pip install pytest pytest-cov requests cryptography jsonschema
           pip install ruff
           pip install pylint
           ruff check
