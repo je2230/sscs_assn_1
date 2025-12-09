@@ -58,8 +58,7 @@ jobs:
         run: |
           pip install mypy
           cd src/sscs_assn4
-          mypy --install-types
-          mypy __main__.py merkle_proof.py util.py > mypy.final.txt
+          mypy --install-types __main__.py merkle_proof.py util.py > mypy.final.txt
 
       - name: Run SAST check
         run: |
