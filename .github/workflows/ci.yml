@@ -34,7 +34,7 @@ jobs:
         run: echo "PYTHONPATH=$PWD/sscs_assn_1" >> $GITHUB_ENV
 
       - name: Activate virtual environment
-        run: Invoke-Expression (poetry env activate)  
+        run: Invoke-Expression (C:\Users\runneradmin\AppData\Roaming\Python\Scripts\poetry env activate)  
 
       - name: Run lint checks
         run: |
