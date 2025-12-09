@@ -50,7 +50,7 @@ jobs:
       - name: Run lint checks
         run: |
           ruff check src
-          pylint src --config pyproject.toml
+          pylint src 
     
       - name: Run mypy
         run: |
