@@ -25,11 +25,10 @@ jobs:
       - name: Install Poetry
         run: |
           curl -sSL https://install.python-poetry.org | python3 -
-          echo 'if (-not (Get-Command poetry -ErrorAction Ignore)) { $env:Path += ";C:\Users\runneradmin\AppData\Roaming\Python\Scripts" }' | Out-File -Append $PROFILE
 
       - name: Install dependencies with Poetry
         run: |
-          poetry install
+          C:\Users\runneradmin\AppData\Roaming\Python\Scripts\poetry install
 
       - name: Set PYTHONPATH to include the source directory
         run: echo "PYTHONPATH=$PWD/sscs_assn_1" >> $GITHUB_ENV
@@ -54,4 +53,4 @@ jobs:
 
       - name: Run tests
         run: |
-          poetry run pytest --cov=sscs_assn_1 --cov-report=term-missing
+          C:\Users\runneradmin\AppData\Roaming\Python\Scripts\poetry run pytest --cov=sscs_assn_1 --cov-report=term-missing
