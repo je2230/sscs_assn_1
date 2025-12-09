@@ -37,15 +37,9 @@ jobs:
         run: |
           C:\Users\runneradmin\AppData\Roaming\Python\Scripts\poetry config virtualenvs.in-project true
 
-      - name: Cache the virtualenv
-        uses: actions/cache@v4
-        with:
-          path: ./.venv
-          key: ${{ runner.os }}-venv-${{ hashFiles('**/poetry.lock') }}
-
       - name: Install dependencies
         run: |
-          pip install pytest pytest-cov requests cryptography jsonschema ruff pylint mypy bandit
+          pip install pytest pytest-cov requests cryptography jsonschema ruff pylint mypy bandit types-requests
 
       - name: Run lint checks
         run: |
@@ -56,13 +50,11 @@ jobs:
     
       - name: Run mypy
         run: |
-          pip install mypy
           cd src/sscs_assn4
-          mypy __main__.py merkle_proof.py util.py --install-types > mypy.final.txt
+          mypy __main__.py merkle_proof.py util.py --install-types
 
       - name: Run SAST check
         run: |
-          pip install bandit
           bandit -r src
 
       - name: Secret Scanning
