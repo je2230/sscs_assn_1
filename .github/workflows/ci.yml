@@ -39,7 +39,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pytest pytest-cov requests cryptography jsonschema ruff pylint mypy bandit types-requests
+          pip install pytest pytest-cov requests cryptography jsonschema ruff pylint mypy bandit types-requests types-PySocks
 
       - name: Run lint checks
         run: |
