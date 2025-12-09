@@ -33,10 +33,15 @@ jobs:
       - name: Set PYTHONPATH to include the source directory
         run: echo "PYTHONPATH=$PWD/sscs_assn_1" >> $GITHUB_ENV
 
-      - name: Activate virtual environment
+      - name: Configure poetry
         run: |
-          Invoke-Expression (C:\Users\runneradmin\AppData\Roaming\Python\Scripts\poetry env activate)  
-          echo PATH=$PATH >> $GITHUB_ENV
+          C:\Users\runneradmin\AppData\Roaming\Python\Scripts\poetry config virtualenvs.in-project true
+
+      - name: Cache the virtualenv
+        uses: actions/cache@v2
+        with:
+          path: ./.venv
+          key: ${{ runner.os }}-venv-${{ hashFiles('**/poetry.lock') }}
 
       - name: Run lint checks
         run: |
