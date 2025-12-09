@@ -1,0 +1,57 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11', '3.12', '3.13']
+      fail-fast: false
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "PATH=$HOME/.local/bin:$PATH" >> $GITHUB_ENV
+
+      - name: Install dependencies with Poetry
+        run: |
+          poetry install
+
+      - name: Set PYTHONPATH to include the source directory
+        run: echo "PYTHONPATH=$PWD/sscs_assn_1" >> $GITHUB_ENV
+
+      - name: Run lint checks
+        run: |
+          ruff check
+          pylint src
+    
+      - name: Run mypy
+        run: |
+          mypy --install-types
+          mypy main.py merkle_proof.py util.py > mypy.final.txt
+
+      - name: Run SAST check
+        run: bandit -r src
+
+      - name: Secret Scanning
+        uses: trufflesecurity/trufflehog@main
+        with:
+          extra_args: --results=verified,unknown
+
+      - name: Run tests
+        run: |
+          poetry run pytest --cov=sscs_assn_1 --cov-report=term-missing
