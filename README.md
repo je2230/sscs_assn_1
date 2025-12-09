@@ -1,4 +1,4 @@
-[![CD Pipeline](https://github.com/je2230/sscs_assn_1/actions/workflows/cd.yml/badge.svg)](https://github.com/je2230/sscs_assn_1/actions/workflows/cd.yml)
+[![CD Pipeline](https://github.com/je2230/sscs_assn_1/actions/workflows/cd.yml/badge.svg)](https://github.com/je2230/sscs_assn_1/actions/workflows/cd.yml) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11592/badge)](https://www.bestpractices.dev/projects/11592)
 
 # Python Rekor Monitor 
 
