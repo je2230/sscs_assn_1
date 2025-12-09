@@ -45,13 +45,12 @@ jobs:
         with:
           name: sbom
           path: |
-            sbom.json
-            sbom.xml
+            cyclonedx-sbom.json
 
       - uses: actions/attest-sbom@v3
         with:
             subject-path: "dist/*"
-            sbom-path: "sbom.json"
+            sbom-path: "cyclonedx-sbom.json"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
