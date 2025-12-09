@@ -38,7 +38,7 @@ jobs:
       - name: Generate SBOM (CycloneDX)
         run: |
           pip install cyclonedx-bom
-          cyclonedx-py environment "$(poetry env info --executable)" --pyproject ./pyproject.toml >> cyclonedx-sbom.json
+          cyclonedx-py environment "$(poetry env info --executable)" --pyproject ./pyproject.toml > cyclonedx-sbom.json
 
       - name: Upload SBOM artifacts
         uses: actions/upload-artifact@v4
@@ -58,7 +58,5 @@ jobs:
           tag_name: ${{ github.ref_name }}
           files: |
             dist/*
-            sbom.json
-            sbom.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
