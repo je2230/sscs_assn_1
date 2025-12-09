@@ -24,9 +24,6 @@ patch = ["subprocess"]
 sigterm = true
 parallel = true
 
-[tool.pylint.master]
-ignore-patterns=merkle_proof.py,util.py
-
 [tool.pylint.format]
 max-line-length = 200
 max-module-lines = 1000
