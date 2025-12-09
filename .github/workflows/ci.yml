@@ -33,6 +33,9 @@ jobs:
       - name: Set PYTHONPATH to include the source directory
         run: echo "PYTHONPATH=$PWD/sscs_assn_1" >> $GITHUB_ENV
 
+      - name: Activate virtual environment
+        run: Invoke-Expression (poetry env activate)  
+
       - name: Run lint checks
         run: |
           ruff check
